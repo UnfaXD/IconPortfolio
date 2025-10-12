@@ -13,14 +13,14 @@ export function Projects() {
     const timelineData = ProjectData.map((project) => ({
         title: project.title,
         content: (
-            <FollowerPointerCard
-                title={
-                    <TitleComponent
-                        title={`Explore ${project.title}`}
-                        avatar={project.content.ProjectArray[0].image}
-                    />
-                }
-            >
+            // <FollowerPointerCard
+            //     title={
+            //         <TitleComponent
+            //             title={`Explore ${project.title}`}
+            //             avatar={project.content.ProjectArray[0].image}
+            //         />
+            //     }
+            // >
             <Link href={`/project/${slugify(project.title)}`} className={'cursor-none'}>
                 <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
                     {(project.content.title).trim()}
@@ -43,15 +43,25 @@ export function Projects() {
                     ))}
                 </div>
                 <div className={'flex items-start justify-start gap-4 mt-4'}>
-                    <Link href={project.content.projectLink} className={'p-3 rounded-2xl border-2  border-neutral-800 dark:border-neutral-200 text-neutral-800 dark:text-neutral-200'}>
+                    <Link 
+                        href={project.content.projectLink} 
+                        className={'p-3 rounded-2xl border-2  border-neutral-800 dark:border-neutral-200 text-neutral-800 dark:text-neutral-200'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <ExternalLink size={12}/>
                     </Link>
-                    <Link href={project.content.dribbbleLink} className={'p-3 rounded-2xl border-2 border-neutral-800 dark:border-neutral-200 text-neutral-800 dark:text-neutral-200'}>
+                    <Link 
+                        href={project.content.dribbbleLink} 
+                        className={'p-3 rounded-2xl border-2 border-neutral-800 dark:border-neutral-200 text-neutral-800 dark:text-neutral-200'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <Dribbble size={12}/>
                     </Link>
                 </div>
             </Link>
-            </FollowerPointerCard>
+            // </FollowerPointerCard>
         ),
     }));
 

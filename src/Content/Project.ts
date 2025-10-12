@@ -73,35 +73,35 @@ export const ProjectData = [
         },
         {
             id:'3',
-            title: "OWC",
+            title: "Pickbazar",
             content: {
-                title: "Next-Gen Recruitment Interface",
+                title: "Modern Ecommerce SaaS Platform",
                 contentLists: [
-                    "✅ AI-powered job matching",
-                    "✅ Candidate tracking dashboard",
-                    "✅ Interactive salary calculator",
-                    "✅ Employer branding modules"
+                    "✅ Multi-vendor marketplace",
+                    "✅ Advanced inventory management",
+                    "✅ Real-time analytics dashboard",
+                    "✅ Integrated payment processing"
                 ],
-                projectLink: "https://obsessedwithcapital.com",
-                dribbbleLink: "https://dribbble.com/shots/25656085-Job-Listing-Web-UI-UX",
-                Problem: "Job seekers struggled with outdated interfaces, while employers lacked tools to showcase company culture. The platform needed to bridge this gap with modern UX solutions.",
-                Solution: "Designed a dual-path interface with personalized dashboards for both candidates and employers. Introduced video profile capabilities and cultural fit assessments.",
-                Conclusion: "Platform engagement increased by 70%, with 40% faster hiring cycles reported by enterprise clients.",
+                projectLink: "https://pickbazar-react-rest.vercel.app/",
+                dribbbleLink: "https://dribbble.com/shots/26640058-PickBazar",
+                Problem: "Small businesses struggled with complex ecommerce setups, while customers needed a seamless shopping experience. The platform needed to simplify online selling with powerful SaaS tools.",
+                Solution: "Built a comprehensive ecommerce SaaS with drag-and-drop store builder, automated inventory tracking, and integrated marketing tools for merchants.",
+                Conclusion: "Merchant onboarding increased by 85%, with 60% faster store setup times and 45% higher conversion rates for customer purchases.",
                 ProjectArray: [
                     {
-                        image: "https://cdn.dribbble.com/userupload/32411429/file/original-9ca6e0a5dde4edcc2302284bc579300b.png?resize=1504x977&vertical=center",
+                        image: "https://cdn.dribbble.com/userupload/45277801/file/ed12deb68fc9323b836851a02651add0.jpg?resize=1504x1124&vertical=center",
                         imageAlt: "hero template",
                     },
                     {
-                        image: "https://cdn.dribbble.com/userupload/32411431/file/original-f02cf659dfab4c272b60c49a988b65e1.png?resize=1504x3356&vertical=center",
+                        image: "https://cdn.dribbble.com/userupload/45277822/file/7522e3db9be3775f7f03da0920d8aa84.png?resize=2048x1326&vertical=center",
                         imageAlt: "feature template",
                     },
                     {
-                        image: "https://cdn.dribbble.com/userupload/32411440/file/original-5361af7c9acbf08acffbe65f3da00200.png?resize=1504x2116&vertical=center",
+                        image: "https://cdn.dribbble.com/userupload/45277825/file/8ea3778c6f0ee2851eb4c9cac3c060d5.png?resize=2048x1326&vertical=center",
                         imageAlt: "bento template",
                     },
                     {
-                        image: "https://cdn.dribbble.com/userupload/32411437/file/original-778c46a6056732af1c03b76a78e63769.png?resize=1504x1282&vertical=center",
+                        image: "https://cdn.dribbble.com/userupload/45277826/file/e9bfa87a214a7f6961c6d2bcb19d500d.png?resize=2048x1326&vertical=center",
                         imageAlt: "cards template",
                     },
                 ]
@@ -111,41 +111,41 @@ export const ProjectData = [
         id:'4',
         title: "WFP",
         content: {
-            title: "Impact-Driven Nonprofit Portal",
+            title: "Secure Banking Linking Platform",
             contentLists: [
-                "✅ Donation tracking system",
-                "✅ Interactive impact maps",
-                "✅ Storytelling timelines",
-                "✅ Volunteer management tools"
+                "✅ Multi-bank account aggregation",
+                "✅ Real-time transaction monitoring",
+                "✅ Financial analytics dashboard",
+                "✅ Secure API integrations"
             ],
             projectLink: "https://womenprogressfamily.netlify.app/",
             dribbbleLink: "https://dribbble.com/shots/25656110-Non-Profit-Organisation-UI-UX",
-            Problem: "The foundation needed to demonstrate program effectiveness while making charitable giving transparent and rewarding.",
-            Solution: "Developed a real-time impact visualization system showing donor contributions. Created personalized dashboards with social sharing features.",
-            Conclusion: "Increased recurring donations by 120% and volunteer sign-ups by 90% in the first quarter post-launch.",
+            Problem: "Financial institutions needed a secure way to connect multiple banking services while providing customers with unified financial insights and management tools.",
+            Solution: "Built a comprehensive banking linking platform with encrypted connections, real-time data synchronization, and advanced financial analytics for better money management.",
+            Conclusion: "Platform adoption increased by 95%, with 70% faster account linking and 85% improvement in financial decision-making accuracy for users.",
             ProjectArray: [
                 {
-                    image: "https://cdn.dribbble.com/userupload/32425643/file/original-f8c7f9658a7bad76c1ccec867d868417.png?resize=1504x977&vertical=center",
+                    image: "https://cdn.dribbble.com/userupload/45278235/file/44ca91ae59c3de6b74293924d88fcaf6.jpg?resize=1024x719&vertical=center",
                     imageAlt: "hero template",
                 },
                 {
-                    image: "https://cdn.dribbble.com/userupload/32425636/file/original-dd99fde7fd48ec666cef5cc4514f0858.jpg?resize=1504x1128&vertical=center",
+                    image: "https://cdn.dribbble.com/userupload/45278233/file/1b4f75e70042a847ef214c59f485efe3.png?resize=1024x695&vertical=center",
                     imageAlt: "feature template",
                 },
                 {
-                    image: "https://cdn.dribbble.com/userupload/32425678/file/original-c203ba6a2999794055be8d5af16b0e64.jpg?resize=1504x1840&vertical=center",
+                    image: "https://cdn.dribbble.com/userupload/45278234/file/1f97a9c2cded02075c05d01cc907012a.png?resize=1024x695&vertical=center",
                     imageAlt: "bento template",
                 },
                 {
-                    image: "https://cdn.dribbble.com/userupload/32425665/file/original-cf0814bf13c1d82dd00ec6d1ad80dc84.png?resize=1504x1921&vertical=center",
+                    image: "https://cdn.dribbble.com/userupload/45278236/file/cfaf7e6398d3dccedf025853112c2fb1.png?resize=1024x695&vertical=center",
                     imageAlt: "cards template",
                 },
             ]
         }
-    },
+        },
         {
             id:'5',
-        title: "Issa",
+        title: "Professional Portfolio",
         content: {
             title: "Minimalist Creative Showcase",
             contentLists: [
