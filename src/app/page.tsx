@@ -15,7 +15,7 @@ export default function Home() {
             <Projects/>
         </section>
         <Blogs/>z
-        <Bento/>
+        <Bento/>x
         <Testimonials/>
     </section>
   );
