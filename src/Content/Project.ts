@@ -73,6 +73,42 @@ export const ProjectData = [
         },
         {
             id:'3',
+            title: "Lunaroot",
+            content: {
+            title: "Mobile Learning Experience for Modern Education",
+            contentLists: [
+                "✅ Personalized learning paths",
+                "✅ Gamified progress tracking",
+                "✅ Interactive quizzes and lessons",
+                "✅ Seamless course enrollment flow"
+            ],
+            projectLink: "https://www.mindsnap.app/",
+                dribbbleLink: "https://dribbble.com/shots/26645335-Mindsnap",
+                Problem: "The existing education platform struggled to engage learners on mobile. Its design lacked interactivity and modern appeal, leading to low course completion rates and poor retention among students.",
+                Solution: "Developed a sleek, intuitive iOS app with personalized learning paths, gamified progress tracking, and smooth micro-interactions. Optimized navigation and accessibility for a distraction-free learning experience on mobile devices.",
+                Conclusion: "The redesign improved course completion rates by 40%, increased daily active users by 2.3x, and boosted app store ratings to 4.8★, establishing the platform as a leading mobile-first education solution.",
+                ProjectArray: [
+                    {
+                        image: "https://cdn.dribbble.com/userupload/45295995/file/6a20eed8f608c28901e00b64f2c6eeb6.jpg?resize=1504x1147&vertical=center",
+                        imageAlt: "hero template 1",
+                    },
+                    {
+                        image: "https://cdn.dribbble.com/userupload/45295997/file/1e77fb63c97e72c42758f6dc2bc3c428.png?resize=2048x1291&vertical=center",
+                        imageAlt: "feature template 2",
+                    },
+                    {
+                        image: "https://cdn.dribbble.com/userupload/45295998/file/5402b5fb30c9a85daf82dbbeb85eef89.png?resize=2048x1291&vertical=center",
+                        imageAlt: "bento template 3",
+                    },
+                    {
+                        image: "https://cdn.dribbble.com/userupload/45295996/file/0711bc0b0e8d166bbc948b7b142615eb.png?resize=2048x1291&vertical=center",
+                        imageAlt: "cards template 4",
+                    },
+                ]
+            }
+        },
+        {
+            id:'4',
             title: "Pickbazar",
             content: {
                 title: "Modern Ecommerce SaaS Platform",
@@ -108,7 +144,7 @@ export const ProjectData = [
             }
         },
         {
-        id:'4',
+        id:'5',
         title: "Zose Agent",
         content: {
             title: "Secure Banking Linking Platform",
@@ -118,7 +154,7 @@ export const ProjectData = [
                 "✅ Financial analytics dashboard",
                 "✅ Secure API integrations"
             ],
-            projectLink: "",
+            projectLink: "https://www.figma.com/proto/U4TPyaRCfpFl7yURZTJZhT/Zose-Fin--Copy-?page-id=1%3A11&node-id=9-158&viewport=1367%2C546%2C0.55&t=XduI4h7m8pmCs82P-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=9%3A158",
             dribbbleLink: "https://dribbble.com/shots/26640181-Zose-Landing-Page",
             Problem: "Financial institutions needed a secure way to connect multiple banking services while providing customers with unified financial insights and management tools.",
             Solution: "Built a comprehensive banking linking platform with encrypted connections, real-time data synchronization, and advanced financial analytics for better money management.",
@@ -144,7 +180,7 @@ export const ProjectData = [
         }
         },
         {
-            id:'5',
+            id:'6',
         title: "Professional Portfolio",
         content: {
             title: "Minimalist Creative Showcase",
@@ -180,7 +216,7 @@ export const ProjectData = [
         }
     },
         {
-            id:'6',
+            id:'7',
         title: "Aether",
         content: {
             title: "Conversion-Optimized Launchpad",
