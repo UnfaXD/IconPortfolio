@@ -109,7 +109,7 @@ export const ProjectData = [
         },
         {
         id:'4',
-        title: "Zose",
+        title: "Zose Agent",
         content: {
             title: "Secure Banking Linking Platform",
             contentLists: [
