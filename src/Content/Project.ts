@@ -73,7 +73,7 @@ export const ProjectData = [
         },
         {
             id:'3',
-            title: "Lunaroot",
+            title: "MindSnap",
             content: {
             title: "Mobile Learning Experience for Modern Education",
             contentLists: [
