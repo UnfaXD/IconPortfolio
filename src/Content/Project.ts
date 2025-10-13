@@ -109,7 +109,7 @@ export const ProjectData = [
         },
         {
         id:'4',
-        title: "WFP",
+        title: "Zose",
         content: {
             title: "Secure Banking Linking Platform",
             contentLists: [
@@ -118,8 +118,8 @@ export const ProjectData = [
                 "✅ Financial analytics dashboard",
                 "✅ Secure API integrations"
             ],
-            projectLink: "https://womenprogressfamily.netlify.app/",
-            dribbbleLink: "https://dribbble.com/shots/25656110-Non-Profit-Organisation-UI-UX",
+            projectLink: "",
+            dribbbleLink: "https://dribbble.com/shots/26640181-Zose-Landing-Page",
             Problem: "Financial institutions needed a secure way to connect multiple banking services while providing customers with unified financial insights and management tools.",
             Solution: "Built a comprehensive banking linking platform with encrypted connections, real-time data synchronization, and advanced financial analytics for better money management.",
             Conclusion: "Platform adoption increased by 95%, with 70% faster account linking and 85% improvement in financial decision-making accuracy for users.",
