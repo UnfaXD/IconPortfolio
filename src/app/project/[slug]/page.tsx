@@ -6,7 +6,7 @@ import { slugify } from "@/lib/slugify";
 import { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-    const slug = (await params).slug
+    const { slug } = await params;
     const project = ProjectData.find(p => slugify(p.title) === slug);
     return {
         title: project ? project.title : "Project Not Found",
@@ -14,8 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function CaseStudy({ params }: { params: Promise<{ slug: string }> }) {
-
-    const slug = (await params).slug
+    const { slug } = await params;
     const project = ProjectData.find(p => slugify(p.title) === slug);
 
     if (!project) {

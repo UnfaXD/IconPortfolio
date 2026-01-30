@@ -18,19 +18,21 @@ const ThemeProvider = ({
     children: React.ReactNode;
     defaultTheme?: Theme;
 }) => {
-    // Initialize theme from localStorage or use default
-    const [theme, setTheme] = useState<Theme>(() => {
-        if (typeof window !== 'undefined') {
-            try {
-                const savedTheme = localStorage.getItem('theme') as Theme | null;
-                return savedTheme || defaultTheme;
-            } catch {
-                return defaultTheme;
-            }
-        }
-        return defaultTheme;
-    });
+    // Always start with defaultTheme so server and first client render match (avoids hydration mismatch).
+    // ThemeScript in <head> already sets document.documentElement class before React, so the page looks correct.
+    const [theme, setTheme] = useState<Theme>(defaultTheme);
 
+    // After mount, sync state from localStorage so ThemeToggle shows the correct active button (avoids hydration mismatch).
+    useEffect(() => {
+        try {
+            const savedTheme = localStorage.getItem('theme') as Theme | null;
+            if (savedTheme) setTheme(savedTheme);
+        } catch {
+            // ignore
+        }
+    }, []);
+
+    // Apply theme to DOM whenever theme changes.
     useEffect(() => {
         const root = window.document.documentElement;
         const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
