@@ -10,6 +10,9 @@ import {
   buildProjectSchema,
 } from "@/lib/seo";
 
+/** Always render project case study from current ProjectData (dynamic, not static snapshot) */
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({
   params,
 }: {

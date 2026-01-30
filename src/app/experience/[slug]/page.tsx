@@ -1,36 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ExperienceData } from "@/Content/Experience";
+import { ExperienceData, getProjectsForEntry } from "@/Content/Experience";
 import { Metadata } from "next";
 import { ExternalLink, ArrowLeft } from "lucide-react";
 import { absoluteUrl, defaultSeo } from "@/lib/seo";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { Testimonials } from "@/components/sections/home/testimonials";
 import { IntroScroll } from "@/components/sections/caseStudy/introScroll";
-
-/** Dummy projects for "Projects I worked on" — replace with real projectIds/ProjectData when ready */
-const DUMMY_PROJECTS = [
-  {
-    id: "d1",
-    title: "Platform Redesign",
-    description:
-      "End-to-end redesign of the core product experience and design system.",
-    href: "/#Products",
-  },
-  {
-    id: "d2",
-    title: "Internal Dashboard",
-    description: "Analytics and operations dashboard for internal teams.",
-    href: "/#Products",
-  },
-  {
-    id: "d3",
-    title: "Mobile App V2",
-    description:
-      "Native mobile app with offline support and push notifications.",
-    href: "/#Products",
-  },
-];
+import { ExperienceProjectCards } from "@/components/sections/caseStudy/experience-project-cards";
 
 export async function generateMetadata({
   params,
@@ -92,7 +69,7 @@ export default async function CompanyExperiencePage({
     notFound();
   }
 
-  const projects = DUMMY_PROJECTS;
+  const projects = getProjectsForEntry(entry);
 
   return (
     <>
@@ -185,34 +162,8 @@ export default async function CompanyExperiencePage({
               )}
             </div>
 
-            {/* Projects I worked on — dummy list */}
-            <div className="mb-10">
-              <h2 className="bg-black dark:bg-white text-white dark:text-black rounded-full text-sm w-fit px-4 py-1 mb-4">
-                Projects I worked on
-              </h2>
-              <ul className="space-y-4">
-                {projects.map((project) => (
-                  <li key={project.id}>
-                    <Link
-                      href={project.href}
-                      className="group block rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 p-4 transition-colors hover:border-neutral-300 dark:hover:border-neutral-700 hover:shadow-md"
-                    >
-                      <div className="flex items-center justify-between gap-4">
-                        <div>
-                          <h3 className="font-semibold text-neutral-900 dark:text-white group-hover:underline">
-                            {project.title}
-                          </h3>
-                          <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                            {project.description}
-                          </p>
-                        </div>
-                        <ExternalLink className="h-4 w-4 shrink-0 text-neutral-400 group-hover:text-neutral-600 dark:group-hover:text-neutral-300" />
-                      </div>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Projects I worked on — click to reveal case study + CTA */}
+            <ExperienceProjectCards projects={projects} />
           </div>
         </TracingBeam>
       </section>
