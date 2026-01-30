@@ -135,16 +135,14 @@ export function Experience() {
                   ))}
                 </div>
 
-                {/* View Projects Link */}
-                {entry.projectsHref && (
-                  <Link
-                    href={entry.projectsHref}
-                    className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-lg text-sm font-semibold text-neutral-700 dark:text-neutral-700 bg-neutral-100 dark:bg-lime-400 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white transition-all duration-200 group/link"
-                  >
-                    <span>View {entry.company} Experience</span>
-                    <ExternalLink className="h-3.5 w-3.5 shrink-0 opacity-70 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-all duration-200" />
-                  </Link>
-                )}
+                {/* View company page: info, links, what I worked on, project timeline */}
+                <Link
+                  href={`/experience/${entry.companySlug}`}
+                  className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-lg text-sm font-semibold text-neutral-700 dark:text-neutral-900 bg-neutral-100 dark:bg-lime-400 hover:bg-neutral-200 dark:hover:bg-lime-300 hover:text-neutral-900 dark:hover:text-black transition-all duration-200 group/link"
+                >
+                  <span>View {entry.company} experience</span>
+                  <ExternalLink className="h-3.5 w-3.5 shrink-0 opacity-70 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-all duration-200" />
+                </Link>
               </div>
             </motion.div>
           </div>
