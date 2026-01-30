@@ -18,7 +18,18 @@ const ThemeProvider = ({
     children: React.ReactNode;
     defaultTheme?: Theme;
 }) => {
-    const [theme, setTheme] = useState<Theme>(defaultTheme);
+    // Initialize theme from localStorage or use default
+    const [theme, setTheme] = useState<Theme>(() => {
+        if (typeof window !== 'undefined') {
+            try {
+                const savedTheme = localStorage.getItem('theme') as Theme | null;
+                return savedTheme || defaultTheme;
+            } catch {
+                return defaultTheme;
+            }
+        }
+        return defaultTheme;
+    });
 
     useEffect(() => {
         const root = window.document.documentElement;
@@ -49,6 +60,21 @@ const ThemeProvider = ({
         mediaQuery.addEventListener('change', handleSystemThemeChange);
         return () =>
             mediaQuery.removeEventListener('change', handleSystemThemeChange);
+    }, [theme]);
+
+    // Persist theme to localStorage when it changes
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            try {
+                if (theme === 'system') {
+                    localStorage.removeItem('theme');
+                } else {
+                    localStorage.setItem('theme', theme);
+                }
+            } catch (error) {
+                console.error('Error saving theme to localStorage:', error);
+            }
+        }
     }, [theme]);
 
     return (

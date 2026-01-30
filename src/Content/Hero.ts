@@ -1,10 +1,10 @@
 export const CompanyName = 'Reconfort.';
 
-export const HeroContent1 = "Let\'s transform your Concept Idea into ";
+export const HeroContent1 = "I am Reconfort, ";
 
-export const HeroServices = ['Website', 'Mobile App', 'UI/UX', 'Management System']
+export const HeroServices = ['Software Engineer', 'Product Manager', 'UI/UX Designer', 'Project Manager']
 
-export const HeroParagraph = 'Receive expert guidance in group or one-on-one sessions to overcome your business challenges and blocks to come up with Creative and Profitable Solutions'
+export const HeroParagraph = 'I am a software engineer with a passion for building products that are user-friendly and efficient.'
 
 export const DockContent = [
     {title:'MongoDB', icon: '/custom-icons/mongodb.png', path: 'https://www.mongodb.com'},
