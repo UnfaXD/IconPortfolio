@@ -57,9 +57,9 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   icons: {
-    icon: "/custom-icons/icon.jpg",
-    apple: "/custom-icons/icon.jpg",
-    shortcut: "/custom-icons/icon.jpg",
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+    shortcut: "/icon.svg",
   },
   manifest: "/manifest.json",
   category: "technology",
