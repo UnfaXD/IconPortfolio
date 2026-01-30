@@ -7,9 +7,7 @@ export default function Home() {
   return (
     <section>
         <Hero/>
-        <section id={'Products'}>
-            <Experience/>
-        </section>
+        <Experience/>
         <Blogs/>
         <Bento/>
         <Testimonials/>
