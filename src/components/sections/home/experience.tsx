@@ -6,7 +6,7 @@ import { ExternalLink } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ExperienceData } from "@/Content/Experience";
 
-const RESUME_URL = "#"; // Replace with your résumé URL
+const RESUME_URL = "#";
 
 export function Experience() {
   const ref = useRef<HTMLDivElement>(null);
@@ -165,7 +165,7 @@ export function Experience() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10 pb-20">
+      {/* <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10 pb-20">
         <motion.a
           href={RESUME_URL}
           target="_blank"
@@ -177,7 +177,7 @@ export function Experience() {
           <span>View Full Résumé</span>
           <ExternalLink className="h-4 w-4 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
         </motion.a>
-      </div>
+      </div> */}
     </section>
   );
 }

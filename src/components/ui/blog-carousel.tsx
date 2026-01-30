@@ -141,20 +141,22 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                         ))}
                     </div>
                 </div>
-                <div className="flex justify-end gap-2 mr-10">
+                <div className="flex justify-end gap-3 px-4 md:px-10 pb-8">
                     <button
-                        className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+                        className="relative z-40 h-11 w-11 rounded-full bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-sm flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed text-neutral-600 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-700 hover:border-neutral-300 dark:hover:border-neutral-600 transition-all duration-200"
                         onClick={scrollLeft}
                         disabled={!canScrollLeft}
+                        aria-label="Scroll left"
                     >
-                        <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
+                        <IconArrowNarrowLeft className="h-5 w-5" />
                     </button>
                     <button
-                        className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+                        className="relative z-40 h-11 w-11 rounded-full bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-sm flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed text-neutral-600 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-700 hover:border-neutral-300 dark:hover:border-neutral-600 transition-all duration-200"
                         onClick={scrollRight}
                         disabled={!canScrollRight}
+                        aria-label="Scroll right"
                     >
-                        <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
+                        <IconArrowNarrowRight className="h-5 w-5" />
                     </button>
                 </div>
             </div>
@@ -209,12 +211,12 @@ export const Card = ({
         <>
             <AnimatePresence>
                 {open && (
-                    <div className="fixed inset-0 h-screen z-50 overflow-auto">
+                    <div className="fixed inset-0 h-screen z-50 overflow-auto px-4 md:px-10 py-10">
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="bg-black/80 backdrop-blur-lg h-full w-full fixed inset-0"
+                            className="bg-black/80 backdrop-blur-lg h-full w-full fixed inset-0 -z-10"
                         />
                         <motion.div
                             initial={{ opacity: 0 }}
@@ -222,27 +224,25 @@ export const Card = ({
                             exit={{ opacity: 0 }}
                             ref={containerRef}
                             layoutId={layout ? `card-${card.title}` : undefined}
-                            className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
+                            className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit z-[60] my-0 p-6 md:p-12 rounded-2xl md:rounded-3xl font-sans relative shadow-2xl border border-neutral-200 dark:border-neutral-800"
                         >
                             <button
-                                className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
+                                className="sticky top-4 h-9 w-9 right-0 ml-auto bg-neutral-200 dark:bg-neutral-700 hover:bg-neutral-300 dark:hover:bg-neutral-600 rounded-full flex items-center justify-center transition-colors"
                                 onClick={handleClose}
+                                aria-label="Close"
                             >
-                                <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
+                                <IconX className="h-5 w-5 text-neutral-700 dark:text-neutral-200" />
                             </button>
-                            <motion.p
-                                layoutId={layout ? `category-${card.title}` : undefined}
-                                className="text-base font-medium text-black dark:text-white"
-                            >
+                            <span className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
                                 {card.category}
-                            </motion.p>
+                            </span>
                             <motion.p
                                 layoutId={layout ? `title-${card.title}` : undefined}
-                                className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white"
+                                className="text-2xl md:text-4xl font-bold text-neutral-900 mt-2 dark:text-white"
                             >
                                 {card.title}
                             </motion.p>
-                            <div className="py-10">{card.content}</div>
+                            <div className="py-8 md:py-10">{card.content}</div>
                         </motion.div>
                     </div>
                 )}
@@ -250,28 +250,31 @@ export const Card = ({
             <motion.button
                 layoutId={layout ? `card-${card.title}` : undefined}
                 onClick={handleOpen}
-                className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
+                className="group rounded-2xl md:rounded-3xl bg-neutral-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-end relative z-10 border border-neutral-200 dark:border-neutral-800 shadow-md hover:shadow-xl hover:border-neutral-300 dark:hover:border-neutral-700 hover:scale-[1.02] transition-all duration-300"
             >
-                <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-                <div className="relative z-40 p-8">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-20 pointer-events-none" />
+                <div className="relative z-30 p-6 md:p-8">
                     <motion.p
                         layoutId={layout ? `category-${card.category}` : undefined}
-                        className="text-white text-sm md:text-base font-medium font-sans text-left"
+                        className="text-white/90 text-xs md:text-sm font-semibold uppercase tracking-wider font-sans text-left"
                     >
                         {card.category}
                     </motion.p>
                     <motion.p
                         layoutId={layout ? `title-${card.title}` : undefined}
-                        className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+                        className="text-white text-lg md:text-2xl font-bold max-w-xs text-left [text-wrap:balance] font-sans mt-1.5 leading-tight"
                     >
                         {card.title}
                     </motion.p>
+                    <span className="inline-block mt-3 text-xs font-medium text-white/80 group-hover:text-white transition-colors">
+                        View design →
+                    </span>
                 </div>
                 <BlurImage
                     src={card.src}
                     alt={card.title}
                     fill
-                    className="object-cover absolute z-10 inset-0"
+                    className="object-cover absolute z-10 inset-0 group-hover:scale-105 transition-transform duration-500"
                 />
             </motion.button>
         </>
