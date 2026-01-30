@@ -35,29 +35,44 @@ export const Hero = () => {
         <div className="relative flex flex-col items-center justify-center gap-3 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 z-40 pointer-events-none w-full max-w-7xl mx-auto px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 xl:px-10 py-4 xs:py-6 sm:py-8 md:py-10 lg:py-12 pt-[max(1rem,env(safe-area-inset-top))] pb-20 xs:pb-24 sm:pb-28 md:pb-32 lg:pb-36">
           <Image
             src="/team/me.jpeg"
-            alt="Reconfort Daniel"
+            alt="Reconfort Daniel - Senior Software Engineer & UI/UX Designer"
             width={200}
             height={200}
+            priority
             className="relative rounded-full border-2 xs:border-4 border-white dark:border-neutral-800 shadow-2xl w-20 h-20 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 xl:w-[200px] xl:h-[200px] hover:scale-105 transition-transform duration-300 -mb-2 xs:-mb-4 sm:-mb-6 md:-mb-8 shrink-0 mt-20 xs:mt-24 sm:mt-0"
           />
-          <h1 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-semibold w-full max-w-7xl mx-auto text-center relative z-20 py-1 xs:py-2 sm:py-3 md:py-4 lg:py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white mt-6 xs:mt-8 sm:mt-12 md:mt-16 animate-pulse">
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-semibold w-full max-w-7xl mx-auto text-center relative z-20 py-1 xs:py-2 sm:py-3 md:py-4 lg:py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white mt-6 xs:mt-8 sm:mt-12 md:mt-16 animate-pulse" aria-hidden>
             👋 Hi there!
-          </h1>
+          </p>
           <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold w-full max-w-7xl mx-auto text-center relative z-20 py-1 xs:py-2 sm:py-4 md:py-6 leading-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white px-0.5 xs:px-1 -mt-6 xs:-mt-8 sm:-mt-10">
             I am Reconfort
             <br />
             <FlipWords words={HeroServices} />
           </h1>
-          <h1 className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold w-full max-w-7xl mx-auto text-center relative z-20 py-1 xs:py-2 sm:py-4 md:py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white opacity-80 flex flex-wrap items-center justify-center gap-1 xs:gap-1.5 sm:gap-2 px-2">
+          <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold w-full max-w-7xl mx-auto text-center relative z-20 py-1 xs:py-2 sm:py-4 md:py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white opacity-80 flex flex-wrap items-center justify-center gap-1 xs:gap-1.5 sm:gap-2 px-2">
             <MapPin
               className="size-3 xs:size-4 sm:size-4 md:size-5 shrink-0 text-lime-400"
               aria-hidden
             />
-            <span>Living in Kigali, Rwanda</span>
-          </h1>
+            <span>Kigali, Rwanda</span>
+          </p>
           <p className="w-full text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-center font-medium text-neutral-700 dark:text-slate-200 max-w-xs xs:max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl px-2 sm:px-3 leading-relaxed sm:w-1/2">
             {HeroParagraph}
           </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-4 xs:mt-6 sm:mt-8">
+            <a
+              href="/#Projects"
+              className="inline-flex items-center justify-center rounded-xl bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-5 py-2.5 text-sm font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-100 transition-colors"
+            >
+              View my work
+            </a>
+            <a
+              href="mailto:danny.reco2002@gmail.com"
+              className="inline-flex items-center justify-center rounded-xl border-2 border-neutral-800 dark:border-white px-5 py-2.5 text-sm font-semibold text-neutral-800 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+            >
+              Work with me
+            </a>
+          </div>
         </div>
 
         {/* Dock — bottom spacing at every breakpoint */}

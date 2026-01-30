@@ -5,37 +5,38 @@ export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://reconfort.vercel.app";
 
 export const defaultSeo = {
-  title: "Reconfort Daniel — Software Engineer & UI/UX Designer",
+  title:
+    "Reconfort Daniel — Senior Software Engineer & UI/UX Designer | Full-Stack Developer Portfolio",
   shortTitle: "Reconfort Daniel",
   description:
-    "Software Engineer and UI/UX Designer building user-friendly, efficient products. Experience in full-stack development, design systems, and product leadership. Based in Kigali, Rwanda.",
+    "Senior Software Engineer & UI/UX Designer. Full-stack developer building scalable web apps, SaaS, and startup products. React, Next.js, Angular, system design. Hire for startups & tech teams. Based in Kigali, Rwanda.",
   keywords: [
-    "Software Engineer",
+    "Software Engineer Portfolio",
+    "Senior Software Engineer",
+    "Full-Stack Developer",
+    "Frontend Engineer",
+    "Backend Engineer",
+    "UI/UX Engineer",
+    "Startup Founder Portfolio",
+    "SaaS Developer",
+    "Tech Consultant",
+    "System Design Expert",
+    "Scalable Web Applications",
+    "React Developer",
+    "Next.js Developer",
+    "Angular Developer",
     "UI/UX Designer",
-    "Full Stack Developer",
-    "React",
-    "Angular",
-    "Next.js",
-    "NestJS",
     "Product Designer",
     "Blockchain Developer",
     "Microservices",
     "Smart Contracts",
-    "Blockchain",
-    "Blockchain Solutions",
-    "Blockchain Technology",
-    "Blockchain Development",
-    "Blockchain Solutions",
-    "Blockchain Technology",
-    "Kigali",
-    "Rwanda",
     "Web Development",
-    "Frontend",
+    "Kigali Rwanda Developer",
   ],
   author: "Reconfort Daniel",
   locale: "en_US",
   imagePath: "/team/me.jpeg",
-  imageAlt: "Reconfort Daniel - Software Engineer & UI/UX Designer",
+  imageAlt: "Reconfort Daniel - Senior Software Engineer & UI/UX Designer",
   twitterHandle: "@Reconfort_",
 } as const;
 
@@ -51,7 +52,7 @@ export function buildPersonSchema() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: defaultSeo.author,
-    jobTitle: "Software Engineer & UI/UX Designer",
+    jobTitle: "Senior Software Engineer & UI/UX Designer",
     description: defaultSeo.description,
     url: siteUrl,
     image: absoluteUrl(defaultSeo.imagePath),
@@ -90,5 +91,47 @@ export function buildWebSiteSchema() {
       },
       "query-input": "required name=search_term_string",
     },
+  };
+}
+
+/** JSON-LD CreativeWork schema for a single project (use on project/[slug] page) */
+export function buildProjectSchema(project: {
+  title: string;
+  description: string;
+  url: string;
+  image?: string;
+  datePublished?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.title,
+    description: project.description,
+    url: project.url,
+    ...(project.image && { image: project.image }),
+    ...(project.datePublished && { datePublished: project.datePublished }),
+    author: { "@id": `${siteUrl}/#person` },
+  };
+}
+
+/** JSON-LD ItemList for portfolio projects (use on homepage) */
+export function buildPortfolioItemListSchema(
+  projects: { title: string; url: string }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Portfolio Projects",
+    description: "Software engineering and UI/UX projects by Reconfort Daniel",
+    numberOfItems: projects.length,
+    itemListElement: projects.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "CreativeWork",
+        name: p.title,
+        url: p.url,
+      },
+    })),
   };
 }

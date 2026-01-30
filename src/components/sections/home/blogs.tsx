@@ -31,12 +31,12 @@ export function Blogs() {
           <span className="inline-block text-xs md:text-sm font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">
             Portfolio
           </span>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white font-sans tracking-tight max-w-3xl">
-            Recent UI/UX Projects
+          <h2 id="Projects" className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white font-sans tracking-tight max-w-3xl scroll-mt-24">
+            Software Engineer & UI/UX Projects
           </h2>
           <p className="mt-3 text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl">
-            Figma designs and interactive prototypes across education, health,
-            and product.
+            Web apps, SaaS, and design systems—from full-stack builds to Figma
+            prototypes across education, health, and product.
           </p>
         </header>
       </div>

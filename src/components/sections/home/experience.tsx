@@ -35,11 +35,11 @@ export function Experience() {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-          Experience
+        <h2 id="Experience" className="scroll-mt-24 text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
+          Software Engineer Experience
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-xl">
-          Companies I’ve worked for and what I did there.
+          Companies I’ve worked with—full-stack, product, and leadership roles.
         </p>
       </div>
 

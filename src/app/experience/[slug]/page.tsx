@@ -50,10 +50,20 @@ export async function generateMetadata({
   const ogImage = entry.companyImage
     ? absoluteUrl(entry.companyImage)
     : absoluteUrl(defaultSeo.imagePath);
+  const keywords = [
+    entry.company,
+    entry.title,
+    "Software Engineer Experience",
+    "Tech Career",
+    "Full-Stack Developer",
+    ...(entry.tags ?? []),
+  ].filter(Boolean);
   return {
     title,
     description,
+    keywords,
     alternates: { canonical: url },
+    robots: { index: true, follow: true },
     openGraph: {
       title,
       description,

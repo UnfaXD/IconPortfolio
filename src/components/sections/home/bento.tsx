@@ -15,7 +15,7 @@ export default function Bento() {
         <p className="text-center text-sm font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
           What differentiates me
         </p>
-        <h2 className="mx-auto mt-2 max-w-2xl text-center text-4xl font-semibold tracking-tight text-balance text-neutral-950 dark:text-neutral-200 sm:text-5xl">
+        <h2 id="Services" className="mx-auto mt-2 max-w-2xl text-center text-4xl font-semibold tracking-tight text-balance text-neutral-950 dark:text-neutral-200 sm:text-5xl scroll-mt-24">
           Why work with me
         </h2>
         <p className="mx-auto mt-3 max-w-lg text-center text-base text-neutral-600 dark:text-neutral-400">
