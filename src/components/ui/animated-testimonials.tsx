@@ -39,9 +39,8 @@ export const AnimatedTestimonials = ({
         }
     }, [autoplay, active]);
 
-    const randomRotateY = () => {
-        return Math.floor(Math.random() * 21) - 10;
-    };
+    // Deterministic rotate per index so server and client match (avoids hydration mismatch)
+    const getRotate = (index: number) => ((index * 7) % 21) - 10;
     return (
         <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
             <div className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
@@ -55,13 +54,13 @@ export const AnimatedTestimonials = ({
                                         opacity: 0,
                                         scale: 0.9,
                                         z: -100,
-                                        rotate: randomRotateY(),
+                                        rotate: getRotate(index),
                                     }}
                                     animate={{
                                         opacity: isActive(index) ? 1 : 0.7,
                                         scale: isActive(index) ? 1 : 0.95,
                                         z: isActive(index) ? 0 : -100,
-                                        rotate: isActive(index) ? 0 : randomRotateY(),
+                                        rotate: isActive(index) ? 0 : getRotate(index),
                                         zIndex: isActive(index)
                                             ? 999
                                             : testimonials.length + 2 - index,
@@ -71,7 +70,7 @@ export const AnimatedTestimonials = ({
                                         opacity: 0,
                                         scale: 0.9,
                                         z: 100,
-                                        rotate: randomRotateY(),
+                                        rotate: getRotate(index),
                                     }}
                                     transition={{
                                         duration: 0.4,

@@ -6,7 +6,6 @@ import {
     motion,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 
 interface TimelineEntry {
     title: string;
@@ -49,8 +48,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
             <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
                 {data.map((item, index) => (
-                    <Link
-                        href={'/caseStudy'}
+                    <div
                         key={index}
                         className="flex justify-start pt-10 md:pt-40 md:gap-10"
                     >
@@ -69,7 +67,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                             </h3>
                             {item.content}{" "}
                         </div>
-                    </Link>
+                    </div>
                 ))}
                 <div
                     style={{

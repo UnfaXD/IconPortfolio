@@ -37,7 +37,7 @@ export const About = () => {
                     {/* Text Content */}
                     <div className="flex-1 text-center lg:text-left">
                         <div className="mb-8">
-                            <p className="text-2xl md:text-3xl font-semibold text-neutral-800 dark:text-neutral-200 mb-4">
+                            <div className="text-2xl md:text-3xl font-semibold text-neutral-800 dark:text-neutral-200 mb-4">
                                 Hi, I'm{" "}
                                 <LinkPreview 
                                     url="https://www.linkedin.com/in/reconfort-daniel/" 
@@ -45,7 +45,7 @@ export const About = () => {
                                 >
                                     {CompanyName}
                                 </LinkPreview>
-                            </p>
+                            </div>
                             <div className="w-16 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto lg:mx-0 rounded-full mb-6"></div>
                         </div>
                         
