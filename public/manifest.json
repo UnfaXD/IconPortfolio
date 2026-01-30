@@ -1,0 +1,17 @@
+{
+  "name": "Reconfort Daniel — Software Engineer & UI/UX Designer",
+  "short_name": "Reconfort Daniel",
+  "description": "Software Engineer and UI/UX Designer. Portfolio and experience.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "/custom-icons/icon.jpg",
+      "sizes": "any",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

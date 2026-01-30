@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ExperienceData } from "@/Content/Experience";
 import { Metadata } from "next";
 import { ExternalLink, ArrowLeft } from "lucide-react";
+import { absoluteUrl, defaultSeo } from "@/lib/seo";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { Testimonials } from "@/components/sections/home/testimonials";
 import { IntroScroll } from "@/components/sections/caseStudy/introScroll";
@@ -38,9 +39,34 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const entry = ExperienceData.find((e) => e.companySlug === slug);
+  if (!entry) {
+    return { title: "Company Not Found" };
+  }
+  const title = `${entry.company} — Experience`;
+  const description =
+    entry.companyDescription ??
+    `${entry.title} at ${entry.company}. ${entry.dateRange}.`;
+  const url = absoluteUrl(`/experience/${slug}`);
+  const ogImage = entry.companyImage
+    ? absoluteUrl(entry.companyImage)
+    : absoluteUrl(defaultSeo.imagePath);
   return {
-    title: entry ? `${entry.company} — Experience` : "Company Not Found",
-    description: entry?.companyDescription,
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: entry.company }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
+    },
   };
 }
 

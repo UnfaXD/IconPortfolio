@@ -5,16 +5,65 @@ import "./globals.css";
 import React from "react";
 import Navbar from "@/components/ui/hero/navbar/Navbar";
 import Footer from "@/components/sections/home/footer";
+import { JsonLd } from "@/components/seo/JsonLd";
+import {
+  siteUrl,
+  defaultSeo,
+  absoluteUrl,
+} from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Icon. From Idea to Solutions",
-  description:
-      "At Icon., we transform your ideas into comprehensive software solutions. Our team drives innovation across every phase of the SDLC—from conceptualization and architecture to deployment and maintenance—ensuring your vision comes to life.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: defaultSeo.title,
+    template: `%s | ${defaultSeo.shortTitle}`,
+  },
+  description: defaultSeo.description,
+  keywords: [...defaultSeo.keywords],
+  authors: [{ name: defaultSeo.author, url: siteUrl }],
+  creator: defaultSeo.author,
+  openGraph: {
+    type: "website",
+    locale: defaultSeo.locale,
+    url: siteUrl,
+    siteName: defaultSeo.shortTitle,
+    title: defaultSeo.title,
+    description: defaultSeo.description,
+    images: [
+      {
+        url: absoluteUrl(defaultSeo.imagePath),
+        width: 1200,
+        height: 630,
+        alt: defaultSeo.imageAlt,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultSeo.title,
+    description: defaultSeo.description,
+    images: [absoluteUrl(defaultSeo.imagePath)],
+    creator: defaultSeo.twitterHandle || undefined,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
   icons: {
     icon: "/custom-icons/icon.jpg",
     apple: "/custom-icons/icon.jpg",
     shortcut: "/custom-icons/icon.jpg",
   },
+  manifest: "/manifest.json",
+  category: "technology",
+  referrer: "origin-when-cross-origin",
 };
 
 export default function RootLayout({
@@ -24,17 +73,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-    <head>
+      <head>
         <ThemeScript />
-    </head>
+        <JsonLd />
+      </head>
       <body
         className={`antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100`}
       >
-      <ThemeProvider>
-        <Navbar/>
+        <ThemeProvider>
+          <Navbar />
           {children}
-        <Footer/>
-      </ThemeProvider>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
