@@ -53,14 +53,16 @@ export function Projects() {
                     >
                         <ExternalLink size={12}/>
                     </Link>
-                    <Link 
-                        href={project.content.dribbbleLink} 
-                        className={'p-3 rounded-2xl border-2 border-neutral-800 dark:border-neutral-200 text-neutral-800 dark:text-neutral-200'}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Dribbble size={12}/>
-                    </Link>
+                    {project.content.dribbbleLink ? (
+                        <Link
+                            href={project.content.dribbbleLink}
+                            className={'p-3 rounded-2xl border-2 border-neutral-800 dark:border-neutral-200 text-neutral-800 dark:text-neutral-200'}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Dribbble size={12}/>
+                        </Link>
+                    ) : null}
                 </div>
             </div>
             // </FollowerPointerCard>
