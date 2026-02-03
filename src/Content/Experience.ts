@@ -107,7 +107,7 @@ export const ExperienceData: ExperienceEntry[] = [
     description:
       "Founded a digital product company that has successfully delivered 10+ client projects while simultaneously building and operating proprietary products. Led the development of an all-in-one real estate platform and Lunaroot, a streetwear startup, with a strong focus on scalable architecture, thoughtful design systems, and user-driven product development.",
     tags: ["Fullstack", "Management", "Lead", "Founder"],
-    projectIds: ["1", "2", "3", "4", "5", "6", "7"],
+    projectIds: ["10", "1", "2", "3", "4", "5", "6", "7"],
   },
   {
     id: "3",

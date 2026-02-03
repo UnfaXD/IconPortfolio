@@ -369,4 +369,30 @@ export const ProjectData = [
       ],
     },
   },
+  
+  {
+    id: "10",
+    title: "Unfazed News",
+    content: {
+      title: "Automated News Aggregator",
+      contentLists: [
+        "✅ AI Real-time news aggregation",
+        "✅ News categorization",
+        "✅ News recommendation system",
+      ],
+      projectLink: "https://unfazednews.vercel.app/",
+      ProjectArray: [
+        {
+          image:
+            "https://cdn.dribbble.com/userupload/32749835/file/original-29172255905ca19297d59f6ba7ffda4a.png?resize=1504x940&vertical=center",
+          imageAlt: "bento template",
+        },
+        {
+          image:
+            "https://cdn.dribbble.com/userupload/32749838/file/original-82e8024ab7c4366ac2119ebfa0f55062.png?resize=1504x940&vertical=center",
+          imageAlt: "cards template",
+        },
+      ],
+    },
+  },
 ];

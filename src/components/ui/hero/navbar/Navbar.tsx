@@ -29,6 +29,12 @@ function Navbar({ className }: { className?: string }) {
               src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
               description="Fashion E-commerce Platform"
             />
+            <ProductItem
+              title="UnfaXD News"
+              href="https://unfazednews.vercel.app/"
+              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+              description="News Aggregator"
+            />
           </div>
         </MenuItem>
         <HoveredLink href="/#Services">Services</HoveredLink>
