@@ -79,7 +79,7 @@ export const ExperienceData: ExperienceEntry[] = [
     title: "Senior Software Engineer & UI/UX Designer",
     company: "Orion Systems & Design",
     companySlug: "orion-systems-design",
-    companyUrl: "https://www.orionsystems.co.rw/",
+    companyUrl: "https://orionco.vercel.app/",
     companyDescription:
       "Orion Systems & Design builds software for banking and e-Government in Rwanda, with a focus on secure, scalable platforms.",
     companyLinks: [
@@ -115,10 +115,10 @@ export const ExperienceData: ExperienceEntry[] = [
     title: "Software Engineer & Blockchain Developer",
     company: "Blockchain Tech Solutions",
     companySlug: "blockchain-tech-solutions",
-    companyUrl: "https://www.blockchaintechsolutions.co.rw/",
+    companyUrl: "https://blockchaingamealliance.net/",
     companyDescription:
       "Blockchain Tech Solutions develops blockchain-based products including gaming and NFT platforms.",
-    companyLinks: [{ label: "Website", url: "https://www.blockchaintechsolutions.co.rw/" }],
+    companyLinks: [{ label: "Website", url: "https://blockchaingamealliance.net/" }],
     description:
       "Developed and maintained the core functionality of the Blockchain Tech Solutions platform, including the Gaming Platforms and the NFT Management System.",
     tags: ["NestJS", "Microservices", "Blockchain", "Smart Contracts", "NextJS"],

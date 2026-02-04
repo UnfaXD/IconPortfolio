@@ -70,6 +70,8 @@ export default async function CompanyExperiencePage({
   }
 
   const projects = getProjectsForEntry(entry);
+  const companyImage = entry.companyImage;
+  const companyEmbedUrl = !companyImage && entry.companyUrl && entry.companyUrl !== "#" ? entry.companyUrl : undefined;
 
   return (
     <>
@@ -77,7 +79,8 @@ export default async function CompanyExperiencePage({
         <IntroScroll
           title={entry.company}
           subTitle={`${entry.dateRange} · ${entry.title}`}
-          image={entry.companyImage ?? "/assets/linear1.webp"}
+          image={companyImage}
+          embedUrl={companyEmbedUrl}
         />
 
         {entry.companyDescription && (
