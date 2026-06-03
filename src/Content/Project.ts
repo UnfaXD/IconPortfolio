@@ -1,4 +1,40 @@
-export const ProjectData = [
+export type ProjectArrayItem = {
+  image: string;
+  imageAlt: string;
+};
+
+export type ProjectContent = {
+  /** Short tagline / subtitle shown as the project's role-up sentence. */
+  title: string;
+  /** Bullet highlights (used by the timeline project view). */
+  contentLists?: string[];
+  /** Live deployed URL or canonical link for the project. */
+  projectLink?: string;
+  /** Dribbble shot link if applicable. */
+  dribbbleLink?: string;
+  /** Case-study fields (optional — Figma-only showcases can leave these out). */
+  Problem?: string;
+  Solution?: string;
+  Conclusion?: string;
+  /** Gallery used on /project/[slug] and as the OG image source. */
+  ProjectArray: ProjectArrayItem[];
+  /** Category label rendered in the home carousel card (e.g. "Education", "Health"). */
+  category?: string;
+  /** Cover image used as the carousel card thumbnail (e.g. /assets/foo.jpg). */
+  coverImage?: string;
+  /** Figma design embed URL — when set, the carousel card reveals an embedded Figma design. */
+  figmaEmbedUrl?: string;
+  /** Figma prototype embed URL — when set, the carousel card reveals an embedded prototype. */
+  prototypeEmbedUrl?: string;
+};
+
+export type Project = {
+  id: string;
+  title: string;
+  content: ProjectContent;
+};
+
+export const ProjectData: Project[] = [
   {
     id: "1",
     title: "Icon V1.",
@@ -304,7 +340,6 @@ export const ProjectData = [
       ],
     },
   },
-
   {
     id: "8",
     title: "District Sacco Banking  MS",
@@ -337,7 +372,6 @@ export const ProjectData = [
       ],
     },
   },
-
   {
     id: "9",
     title: "TRMIS System",
@@ -369,7 +403,6 @@ export const ProjectData = [
       ],
     },
   },
-  
   {
     id: "10",
     title: "Unfazed News",
@@ -392,6 +425,139 @@ export const ProjectData = [
             "https://cdn.dribbble.com/userupload/32749838/file/original-82e8024ab7c4366ac2119ebfa0f55062.png?resize=1504x940&vertical=center",
           imageAlt: "cards template",
         },
+      ],
+    },
+  },
+
+  // ──────────────────────────────────────────────────────────────────
+  // Figma showcase projects (rendered in the home carousel via
+  // coverImage + figmaEmbedUrl / prototypeEmbedUrl).
+  // ──────────────────────────────────────────────────────────────────
+  {
+    id: "11",
+    title: "TooNation",
+    content: {
+      title: "You learn more with TooNation",
+      category: "Education",
+      coverImage: "/assets/too.jpg",
+      figmaEmbedUrl:
+        "https://embed.figma.com/design/O2ISTHLzYrPkpu76Z3rwwM/Too-Nation?node-id=0-1&embed-host=share",
+      prototypeEmbedUrl:
+        "https://embed.figma.com/proto/O2ISTHLzYrPkpu76Z3rwwM/Too-Nation?page-id=0%3A1&node-id=1-2&embed-host=share",
+      ProjectArray: [
+        { image: "/assets/too.jpg", imageAlt: "TooNation cover" },
+      ],
+    },
+  },
+  {
+    id: "12",
+    title: "Tantine",
+    content: {
+      title: "Enhance female menstruation with Tantine",
+      category: "Health",
+      coverImage: "/assets/tantine.jpg",
+      figmaEmbedUrl:
+        "https://embed.figma.com/design/JGIC4cyjI1okmwN3ST3ye9/Tantine-app?node-id=1-4&embed-host=share",
+      prototypeEmbedUrl:
+        "https://embed.figma.com/proto/JGIC4cyjI1okmwN3ST3ye9/Tantine-app?node-id=485-2177&scaling=scale-down&content-scaling=fixed&page-id=1%3A4&starting-point-node-id=485%3A2185&embed-host=share",
+      ProjectArray: [
+        { image: "/assets/tantine.jpg", imageAlt: "Tantine cover" },
+      ],
+    },
+  },
+  {
+    id: "13",
+    title: "Lennox",
+    content: {
+      title: "Explore Trends with Lennox",
+      category: "Creative",
+      coverImage: "/assets/lennox.jpg",
+      figmaEmbedUrl:
+        "https://embed.figma.com/design/CTw5vIPD4fN6OWDtrYl8c4/Lennox?node-id=6-45&embed-host=share",
+      prototypeEmbedUrl:
+        "https://embed.figma.com/proto/CTw5vIPD4fN6OWDtrYl8c4/Lennox?node-id=8-88&scaling=scale-down&content-scaling=fixed&page-id=6%3A44&embed-host=share",
+      ProjectArray: [
+        { image: "/assets/lennox.jpg", imageAlt: "Lennox cover" },
+      ],
+    },
+  },
+  {
+    id: "14",
+    title: "Univease",
+    content: {
+      title: "Univease",
+      category: "Education",
+      coverImage: "/assets/univease.jpg",
+      figmaEmbedUrl:
+        "https://embed.figma.com/design/r2ssM17YvHjoX0DIbO8F8z/UnivEase?node-id=8-44&embed-host=share",
+      prototypeEmbedUrl:
+        "https://embed.figma.com/proto/r2ssM17YvHjoX0DIbO8F8z/UnivEase?node-id=185-71&p=f&scaling=scale-down&content-scaling=fixed&page-id=8%3A44&starting-point-node-id=185%3A71&embed-host=share",
+      ProjectArray: [
+        { image: "/assets/univease.jpg", imageAlt: "Univease cover" },
+      ],
+    },
+  },
+  {
+    id: "15",
+    title: "Agakoti VPN",
+    content: {
+      title: "Agakoti VPN",
+      category: "Agency",
+      coverImage: "/assets/agakoti.jpg",
+      figmaEmbedUrl:
+        "https://embed.figma.com/design/wwSz8tph1jta4pUJ9O7bLP/Agakoti-VPN?node-id=4-67&embed-host=share",
+      prototypeEmbedUrl:
+        "https://embed.figma.com/proto/wwSz8tph1jta4pUJ9O7bLP/Agakoti-VPN?page-id=4%3A67&node-id=10-51&starting-point-node-id=10%3A51&scaling=scale-down&content-scaling=fixed&embed-host=share",
+      ProjectArray: [
+        { image: "/assets/agakoti.jpg", imageAlt: "Agakoti VPN cover" },
+      ],
+    },
+  },
+  {
+    id: "16",
+    title: "Timeline Travel & Tours",
+    content: {
+      title: "Timeline Travel & Tours",
+      category: "Tourist",
+      coverImage: "/assets/ttt.jpg",
+      figmaEmbedUrl:
+        "https://embed.figma.com/design/99IzCQjbkpP2B3hpJgX9o7/TimelineTravel%26Tours?node-id=0-1&embed-host=share",
+      prototypeEmbedUrl:
+        "https://embed.figma.com/proto/99IzCQjbkpP2B3hpJgX9o7/TimelineTravel%26Tours?node-id=1-4&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A4&embed-host=share",
+      ProjectArray: [
+        { image: "/assets/ttt.jpg", imageAlt: "Timeline Travel & Tours cover" },
+      ],
+    },
+  },
+  {
+    id: "17",
+    title: "Obsessed with Capital",
+    content: {
+      title: "Obsessed with Capital",
+      category: "Hiring",
+      coverImage: "/assets/owc.jpg",
+      figmaEmbedUrl:
+        "https://embed.figma.com/design/QpXKE62f9U1ZjvFo6w7RGJ/OWC?node-id=3-3&embed-host=share",
+      prototypeEmbedUrl:
+        "https://embed.figma.com/proto/QpXKE62f9U1ZjvFo6w7RGJ/OWC?page-id=3%3A3&node-id=64-585&p=f&viewport=-495%2C298%2C0.15&scaling=scale-down&content-scaling=fixed&starting-point-node-id=64%3A585&embed-host=share",
+      ProjectArray: [
+        { image: "/assets/owc.jpg", imageAlt: "Obsessed with Capital cover" },
+      ],
+    },
+  },
+  {
+    id: "18",
+    title: "History Interaction Timeline",
+    content: {
+      title: "History Interaction Timeline",
+      category: "Education",
+      coverImage: "/assets/hit.jpg",
+      figmaEmbedUrl:
+        "https://embed.figma.com/design/tibbspW0iNcSqw49ebu5tx/History-Interaction?node-id=48-2&embed-host=share",
+      prototypeEmbedUrl:
+        "https://embed.figma.com/proto/tibbspW0iNcSqw49ebu5tx/History-Interaction?node-id=106-31182&scaling=min-zoom&content-scaling=fixed&page-id=48%3A2&embed-host=share",
+      ProjectArray: [
+        { image: "/assets/hit.jpg", imageAlt: "History Interaction Timeline cover" },
       ],
     },
   },

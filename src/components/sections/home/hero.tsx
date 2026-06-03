@@ -17,7 +17,7 @@ const DockItems = ({ src }: { src: string }) => {
 
 export const Hero = () => {
   return (
-    <section className="min-h-[100dvh] w-full overflow-x-hidden sm:min-h-screen">
+    <section id="Top" className="min-h-[100dvh] w-full overflow-x-hidden sm:min-h-screen">
       <BackgroundBeamsWithCollision
         className={
           "flex-col !min-h-[100dvh] !h-[100dvh] sm:!min-h-screen sm:!h-screen bg-neutral-200 dark:bg-neutral-950"
@@ -41,8 +41,8 @@ export const Hero = () => {
             priority
             className="relative rounded-full border-2 xs:border-4 border-white dark:border-neutral-800 shadow-2xl w-20 h-20 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 xl:w-[200px] xl:h-[200px] hover:scale-105 transition-transform duration-300 -mb-2 xs:-mb-4 sm:-mb-6 md:-mb-8 shrink-0 mt-20 xs:mt-24 sm:mt-0"
           />
-          <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-semibold w-full max-w-7xl mx-auto text-center relative z-20 py-1 xs:py-2 sm:py-3 md:py-4 lg:py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white mt-6 xs:mt-8 sm:mt-12 md:mt-16 animate-pulse" aria-hidden>
-            👋 Hi there!
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-semibold w-full max-w-7xl mx-auto text-center relative z-20 py-1 xs:py-2 sm:py-3 md:py-4 lg:py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white mt-6 xs:mt-8 sm:mt-12 md:mt-16">
+            <span role="img" aria-label="Waving hand">👋</span> Hi there!
           </p>
           <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold w-full max-w-7xl mx-auto text-center relative z-20 py-1 xs:py-2 sm:py-4 md:py-6 leading-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white px-0.5 xs:px-1 -mt-6 xs:-mt-8 sm:-mt-10">
             I am Reconfort

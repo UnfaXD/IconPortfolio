@@ -6,7 +6,7 @@ import { ExternalLink } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ExperienceData } from "@/Content/Experience";
 
-const RESUME_URL = "#";
+const RESUME_URL = "/resume.pdf";
 
 export function Experience() {
   const ref = useRef<HTMLDivElement>(null);
@@ -35,7 +35,7 @@ export function Experience() {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 id="Experience" className="scroll-mt-24 text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
+        <h2 className="scroll-mt-24 text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
           Software Engineer Experience
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-xl">
@@ -163,11 +163,12 @@ export function Experience() {
         </div>
       </div>
 
-      {/* <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10 pb-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10 pb-20">
         <motion.a
           href={RESUME_URL}
           target="_blank"
           rel="noopener noreferrer"
+          download
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-700 hover:border-neutral-300 dark:hover:border-neutral-600 transition-all duration-200 group"
@@ -175,7 +176,7 @@ export function Experience() {
           <span>View Full Résumé</span>
           <ExternalLink className="h-4 w-4 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
         </motion.a>
-      </div> */}
+      </div>
     </section>
   );
 }

@@ -1,26 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion';
-import {
-    Mail,
-    Twitter,
-    Instagram,
-    Linkedin,
-    Github
-} from 'lucide-react';
-import {ThemeToggle} from "@/components/theme/theme-toggle";
 import Link from "next/link";
 import {LinkPreview} from "@/components/ui/about/link-preview";
-import {CompanyName} from "@/Content/Hero";
-import {AboutContent} from "@/Content/About";
-
-const socialLinks = [
-    { icon: Mail, href: 'mailto:contact@example.com' },
-    { icon: Twitter, href: 'https://twitter.com/yourhandle' },
-    { icon: Instagram, href: 'https://instagram.com/yourhandle' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/yourprofile' },
-    { icon: Github, href: 'https://github.com/yourusername' }
-];
 
 const Footer = () => {
     return (
@@ -48,7 +30,6 @@ const Footer = () => {
                             Dribbble
                         </LinkPreview>{" "}
                         <Link className={'duration-150 hover:tracking-widest'} href={'mailto:danny.reco2002@gmail.com'} target={'_self'}>Email</Link>
-                        <ThemeToggle/>
                     </ul>
                 </div>
             </motion.footer>
