@@ -47,14 +47,14 @@ export function Experience() {
         {ExperienceData.map((entry, index) => (
           <div
             key={entry.id}
-            className="flex justify-start pt-8 md:pt-12 gap-6 md:gap-10 mb-4"
+            className="flex justify-start pt-8 md:pt-12 gap-0 md:gap-10 mb-4"
           >
-            {/* Left: date range */}
-            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full shrink-0">
+            {/* Left: date range (desktop) + timeline dot */}
+            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start md:max-w-xs lg:max-w-sm md:w-full shrink-0">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center z-10">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700" />
               </div>
-              <p className="text-sm md:text-base font-medium text-neutral-500 dark:text-neutral-400 pl-20 md:pl-20 w-full">
+              <p className="hidden md:block text-sm md:text-base font-medium text-neutral-500 dark:text-neutral-400 md:pl-20 md:w-full">
                 {entry.dateRange}
               </p>
             </div>
