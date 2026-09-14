@@ -1,6 +1,4 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+const nextConfig = {
   images: {
     remotePatterns: [
       { hostname: "assets.aceternity.com", pathname: "/**", protocol: "https" },

@@ -17,13 +17,19 @@ jobs:
     name: Build and deploy
     runs-on: [self-hosted, reconfort-portfolio]
     timeout-minutes: 15
+    env:
+      # Avoid writing into /opt/reconfort-portfolio/.npm (often root-owned → EACCES).
+      NPM_CONFIG_CACHE: ${{ github.workspace }}/.npm-cache
+      npm_config_cache: ${{ github.workspace }}/.npm-cache
 
     steps:
       - name: Check out the release
         uses: actions/checkout@v4
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          mkdir -p "$NPM_CONFIG_CACHE"
+          npm ci
 
       - name: Verify production build
         run: npm run build
@@ -38,9 +44,30 @@ jobs:
           install -d -m 0755 /opt/reconfort-portfolio/releases
           rm -rf "$RELEASE"
           install -d -m 0755 "$RELEASE"
-          rsync -a --delete --exclude=.git --exclude=.github "$GITHUB_WORKSPACE/" "$RELEASE/"
+          rsync -a --delete \
+            --exclude=.git \
+            --exclude=.github \
+            --exclude=.npm-cache \
+            "$GITHUB_WORKSPACE/" "$RELEASE/"
           ln -sfn "$RELEASE" /opt/reconfort-portfolio/current
           sudo /usr/local/sbin/reconfort-portfolio-deploy
 
       - name: Smoke test
-        run: curl --fail --retry 6 --retry-delay 2 http://127.0.0.1:3040/
+        run: |
+          # curl --retry does NOT retry connection refused unless --retry-connrefused
+          curl --fail --retry 10 --retry-delay 3 --retry-connrefused \
+            --retry-all-errors \
+            http://127.0.0.1:3040/
+
+      - name: Diagnose service on smoke failure
+        if: failure()
+        run: |
+          echo "::group::Listening ports"
+          ss -ltnp | grep -E '3040|node' || true
+          echo "::endgroup::"
+          echo "::group::Service status"
+          systemctl status reconfort-portfolio.service --no-pager || true
+          echo "::endgroup::"
+          echo "::group::Recent logs"
+          journalctl -u reconfort-portfolio.service -n 80 --no-pager || true
+          echo "::endgroup::"
