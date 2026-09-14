@@ -4,6 +4,7 @@ import { Testimonials } from "@/components/sections/home/testimonials";
 import { ProjectData } from "@/Content/Project";
 import { slugify } from "@/lib/slugify";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import {
   absoluteUrl,
   defaultSeo,
@@ -21,7 +22,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = ProjectData.find((p) => slugify(p.title) === slug);
   if (!project) {
-    return { title: "Project Not Found" };
+    return { title: "Not Found" };
   }
   const title = project.title;
   const description =
@@ -75,11 +76,7 @@ export default async function CaseStudy({
   const project = ProjectData.find((p) => slugify(p.title) === slug);
 
   if (!project) {
-    return (
-      <h1 className="text-center w-full h-full flex-center font-bold">
-        Project not found
-      </h1>
-    );
+    notFound();
   }
 
   const projectUrl = absoluteUrl(`/project/${slug}`);
@@ -110,7 +107,32 @@ export default async function CaseStudy({
           title={project.title}
           image={project.content.ProjectArray[0].image}
           subTitle={project.content.title}
+          embedUrl={project.content.projectLink}
         />
+        {(project.content.projectLink || project.content.secondaryLink) && (
+          <div className="mx-auto flex max-w-2xl flex-wrap items-center gap-3 px-6 pb-6">
+            {project.content.projectLink && (
+              <a
+                href={project.content.projectLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full bg-neutral-900 dark:bg-white px-4 py-2 text-sm font-semibold text-white dark:text-neutral-900"
+              >
+                Visit live site
+              </a>
+            )}
+            {project.content.secondaryLink && (
+              <a
+                href={project.content.secondaryLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full border border-neutral-400 dark:border-neutral-600 px-4 py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-100"
+              >
+                {project.content.secondaryLinkLabel ?? "Related link"}
+              </a>
+            )}
+          </div>
+        )}
         <Details
           problem={project.content.Problem}
           solution={project.content.Solution}

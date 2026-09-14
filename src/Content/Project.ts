@@ -26,6 +26,12 @@ export type ProjectContent = {
   figmaEmbedUrl?: string;
   /** Figma prototype embed URL — when set, the carousel card reveals an embedded prototype. */
   prototypeEmbedUrl?: string;
+  /** Marks personal / in-progress products for the featured Ongoing section. */
+  status?: "ongoing" | "shipped";
+  /** Optional second live URL (e.g. studio / app surface). */
+  secondaryLink?: string;
+  /** Label for secondaryLink (defaults to "Secondary"). */
+  secondaryLinkLabel?: string;
 };
 
 export type Project = {
@@ -35,6 +41,65 @@ export type Project = {
 };
 
 export const ProjectData: Project[] = [
+  // Ongoing personal products — set status: "ongoing" to feature on the home Ongoing section.
+  {
+    id: "19",
+    title: "Estatify",
+    content: {
+      title: "Property management, made effortless",
+      status: "ongoing",
+      category: "SaaS · Real Estate",
+      coverImage: "/assets/estatify.jpg",
+      projectLink: "https://www.estatify.rw/",
+      contentLists: [
+        "✅ Properties, units, tenants, and leases in one workspace",
+        "✅ Rent tracking, renewals, and payment history",
+        "✅ Maintenance request queue with status and priority",
+        "✅ Plans from Starter to Scale for growing portfolios",
+      ],
+      Problem:
+        "Property operators in Rwanda and similar markets often juggle spreadsheets, WhatsApp threads, and disconnected tools for tenants, leases, rent, and maintenance. That fragmentation makes everyday portfolio work slow, error-prone, and hard to scale.",
+      Solution:
+        "Building Estatify as a clear, modern property management SaaS: add properties and units, connect tenants and leases, then run payments and maintenance from one source of truth—with a marketing site that makes the product feel familiar from day one.",
+      Conclusion:
+        "Estatify is an ongoing personal product—live, iterated weekly, and designed to cover the full operator loop from portfolio control to rent day and maintenance.",
+      ProjectArray: [
+        {
+          image: "/assets/estatify.jpg",
+          imageAlt: "Estatify marketing site — property management, made effortless",
+        },
+      ],
+    },
+  },
+  {
+    id: "20",
+    title: "Unfazed Studio",
+    content: {
+      title: "Creative technology studio in Kigali",
+      status: "ongoing",
+      category: "Studio · Agency",
+      coverImage: "/assets/unfazed-studio.jpg",
+      projectLink: "https://studio.estatify.rw/",
+      contentLists: [
+        "✅ Full-service studio positioning: build, launch, grow, scale",
+        "✅ Software, product design, branding, and growth services",
+        "✅ Case studies and clear proposal / contact flows",
+        "✅ Live studio marketing site",
+      ],
+      Problem:
+        "Unfazed needed a sharp public face that sells ambitious digital work—websites, brands, and products—without looking like a generic agency template.",
+      Solution:
+        "Designed and shipped a bold studio marketing site with clear services, process, and case-study storytelling so prospects understand the offer and can start a conversation fast.",
+      Conclusion:
+        "The studio site is live and evolving, anchoring Unfazed as a Kigali creative-technology studio for client and product work.",
+      ProjectArray: [
+        {
+          image: "/assets/unfazed-studio.jpg",
+          imageAlt: "Unfazed Studio homepage",
+        },
+      ],
+    },
+  },
   {
     id: "1",
     title: "Icon V1.",

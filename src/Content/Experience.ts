@@ -97,17 +97,18 @@ export const ExperienceData: ExperienceEntry[] = [
     title: "Lead Engineer & Full Stack Engineer",
     company: "Unfazed XD",
     companySlug: "unfazed-xd",
-    companyUrl: "https://iconns.netlify.app/",
+    companyUrl: "https://studio.estatify.rw/",
     companyDescription:
       "Unfazed XD is a digital product studio building web and mobile products for startups and brands.",
     companyLinks: [
-      { label: "Website", url: "https://iconns.netlify.app/" },
+      { label: "Studio", url: "https://studio.estatify.rw/" },
+      { label: "Estatify", url: "https://www.estatify.rw/" },
       { label: "Dribbble", url: "https://dribbble.com" },
     ],
     description:
-      "Founded a digital product company that has successfully delivered 10+ client projects while simultaneously building and operating proprietary products. Led the development of an all-in-one real estate platform and Lunaroot, a streetwear startup, with a strong focus on scalable architecture, thoughtful design systems, and user-driven product development.",
+      "Founded a digital product company that has successfully delivered 10+ client projects while simultaneously building and operating proprietary products. Led Estatify (property management SaaS), Unfazed Studio (creative technology studio site), and Lunaroot (streetwear), with a strong focus on scalable architecture, thoughtful design systems, and user-driven product development.",
     tags: ["Fullstack", "Management", "Lead", "Founder"],
-    projectIds: ["10", "1", "2", "3", "4", "5", "6", "7"],
+    projectIds: ["19", "20", "10", "1", "2", "3", "4", "5", "6", "7"],
   },
   {
     id: "3",

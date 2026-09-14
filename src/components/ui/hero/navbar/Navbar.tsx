@@ -1,16 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import {
-  Home,
-  Briefcase,
-  FolderKanban,
-  Sparkles,
-  Quote,
-  Mail,
-  Moon,
-  Sun,
-} from "lucide-react";
+import { Briefcase, FolderKanban, Mail, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/components/theme/theme-provider";
 import type { ComponentType } from "react";
 
@@ -21,11 +12,8 @@ type NavItem = {
 };
 
 const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "/#Top", icon: Home },
   { label: "Experience", href: "/#Experience", icon: Briefcase },
   { label: "Projects", href: "/#Projects", icon: FolderKanban },
-  { label: "Differentiators", href: "/#Differentiators", icon: Sparkles },
-  { label: "Testimonials", href: "/#Testimonials", icon: Quote },
   { label: "Contact", href: "mailto:danny.reco2002@gmail.com", icon: Mail },
 ];
 
@@ -83,7 +71,7 @@ function Navbar({ className }: { className?: string }) {
     >
       <nav
         aria-label="Primary"
-        className="rounded-full border border-transparent dark:border-white/[0.15] bg-white/90 dark:bg-black/80 backdrop-blur shadow-lg flex items-center gap-1 px-2 py-1.5 max-w-[min(96vw,720px)]"
+        className="rounded-full border border-transparent dark:border-white/[0.15] bg-white/90 dark:bg-black/80 backdrop-blur shadow-lg flex items-center gap-1 px-2 py-1.5"
       >
         {NAV_ITEMS.map((item) => (
           <NavLink key={item.label} item={item} />

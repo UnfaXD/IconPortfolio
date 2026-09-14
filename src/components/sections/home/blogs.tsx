@@ -52,7 +52,9 @@ const FigmaContent = ({ figma, prototype }: FigmaContentProps) => {
 };
 
 export function Blogs() {
-  const cards = ProjectData.filter((p) => p.content.coverImage).map(
+  const cards = ProjectData.filter(
+    (p) => p.content.coverImage && p.content.status !== "ongoing",
+  ).map(
     (project, index) => (
       <Card
         key={project.id}

@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import Link from "next/link";
 import {LinkPreview} from "@/components/ui/about/link-preview";
 

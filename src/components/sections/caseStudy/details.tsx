@@ -23,7 +23,7 @@ export function Details({problem, solution, conclusion, gallery}: DetailsProps) 
                     </h2>
 
                     <div className="text-sm  prose prose-sm dark:prose-invert">
-                        {gallery && gallery[0].image && (
+                        {gallery?.[0]?.image && (
                             <Image
                                 src={gallery[0].image}
                                 alt="blog thumbnail"
@@ -42,7 +42,7 @@ export function Details({problem, solution, conclusion, gallery}: DetailsProps) 
                     </h2>
 
                     <div className="text-sm  prose prose-sm dark:prose-invert">
-                        {gallery && gallery[1].image && (
+                        {gallery?.[1]?.image && (
                             <Image
                                 src={gallery[1].image}
                                 alt="blog thumbnail"

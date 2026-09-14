@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-import { motion, AnimatePresence, useMotionValue } from "framer-motion";
+import { motion, AnimatePresence, useMotionValue } from "motion/react";
 import { cn } from "@/lib/utils";
 
 export const FollowerPointerCard = ({
