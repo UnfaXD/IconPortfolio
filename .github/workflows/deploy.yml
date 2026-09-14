@@ -15,7 +15,7 @@ concurrency:
 jobs:
   deploy:
     name: Build and deploy
-    runs-on: self-hosted
+    runs-on: [self-hosted, reconfort-portfolio]
     timeout-minutes: 15
 
     steps:
@@ -35,14 +35,12 @@ jobs:
         env:
           RELEASE: /opt/reconfort-portfolio/releases/${{ github.sha }}
         run: |
-          install -d -o reconfort -g reconfort -m 0755 /opt/reconfort-portfolio/releases
+          install -d -m 0755 /opt/reconfort-portfolio/releases
           rm -rf "$RELEASE"
-          install -d -o reconfort -g reconfort -m 0755 "$RELEASE"
+          install -d -m 0755 "$RELEASE"
           rsync -a --delete --exclude=.git --exclude=.github "$GITHUB_WORKSPACE/" "$RELEASE/"
-          chown -R reconfort:reconfort "$RELEASE"
           ln -sfn "$RELEASE" /opt/reconfort-portfolio/current
-          systemctl restart reconfort-portfolio.service
-          systemctl is-active --quiet reconfort-portfolio.service
+          sudo /usr/local/sbin/reconfort-portfolio-deploy
 
       - name: Smoke test
         run: curl --fail --retry 6 --retry-delay 2 http://127.0.0.1:3040/
