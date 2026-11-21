@@ -51,6 +51,22 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         }
     }, [initialScroll]);
 
+    // Mostly-vertical wheel/trackpad gestures over the carousel scroll the page.
+    // Without this, a slightly diagonal trackpad swipe latches onto the
+    // horizontal scroller and the page stops moving down.
+    useEffect(() => {
+        const el = carouselRef.current;
+        if (!el) return;
+        const onWheel = (e: WheelEvent) => {
+            if (e.ctrlKey || Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+            e.preventDefault();
+            const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? window.innerHeight : 1;
+            window.scrollBy({ top: e.deltaY * unit, behavior: "instant" as ScrollBehavior });
+        };
+        el.addEventListener("wheel", onWheel, { passive: false });
+        return () => el.removeEventListener("wheel", onWheel);
+    }, []);
+
     const checkScrollability = () => {
         if (carouselRef.current) {
             const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
@@ -102,7 +118,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         >
             <div className="relative w-full">
                 <div
-                    className="flex w-full overflow-x-scroll overscroll-x-auto py-10 md:py-20 scroll-smooth [scrollbar-width:none]"
+                    className="flex w-full overflow-x-scroll overscroll-x-auto py-6 md:py-10 scroll-smooth [scrollbar-width:none]"
                     ref={carouselRef}
                     onScroll={checkScrollability}
                 >
@@ -250,7 +266,7 @@ export const Card = ({
             <motion.button
                 layoutId={layout ? `card-${card.title}` : undefined}
                 onClick={handleOpen}
-                className="group rounded-2xl md:rounded-3xl bg-neutral-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-end relative z-10 border border-neutral-200 dark:border-neutral-800 shadow-md hover:shadow-xl hover:border-neutral-300 dark:hover:border-neutral-700 hover:scale-[1.02] transition-all duration-300"
+                className="group rounded-2xl md:rounded-3xl bg-neutral-100 dark:bg-neutral-900 h-80 w-56 md:h-[min(40rem,65svh)] md:w-96 overflow-hidden flex flex-col items-start justify-end relative z-10 border border-neutral-200 dark:border-neutral-800 shadow-md hover:shadow-xl hover:border-neutral-300 dark:hover:border-neutral-700 hover:scale-[1.02] transition-all duration-300"
             >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-20 pointer-events-none" />
                 <div className="relative z-30 p-6 md:p-8">
