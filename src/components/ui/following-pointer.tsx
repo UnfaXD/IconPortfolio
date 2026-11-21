@@ -27,11 +27,12 @@ export const FollowerPointerCard = ({
     }, []);
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-        if (rect) {
-            const scrollX = window.scrollX;
-            const scrollY = window.scrollY;
-            x.set(e.clientX - rect.left + scrollX);
-            y.set(e.clientY - rect.top + scrollY);
+        // Measure on every move: the wrapper can be pinned (sticky), so its
+        // position at mount is not where it is now.
+        const r = ref.current?.getBoundingClientRect() ?? rect;
+        if (r) {
+            x.set(e.clientX - r.left);
+            y.set(e.clientY - r.top);
         }
     };
     const handleMouseLeave = () => {

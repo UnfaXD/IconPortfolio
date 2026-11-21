@@ -78,7 +78,7 @@ export function Blogs() {
   return (
     <section
       id="Projects"
-      className="relative w-full overflow-hidden py-16 md:py-24 bg-gradient-to-b from-neutral-100 to-neutral-50 dark:from-[#0a0a0a] dark:to-[#0a0a0a]"
+      className="relative w-full overflow-x-clip py-8 md:py-12 bg-gradient-to-b from-neutral-100 to-neutral-50 dark:from-[#0a0a0a] dark:to-[#0a0a0a]"
     >
       <div
         className="absolute inset-0 opacity-[0.02] dark:opacity-[0.03] pointer-events-none"
@@ -93,24 +93,26 @@ export function Blogs() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 md:px-8 lg:px-10">
-        <header className="mb-4 md:mb-6">
-          <span className="inline-block text-xs md:text-sm font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">
-            Portfolio
-          </span>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white font-sans tracking-tight max-w-3xl scroll-mt-24">
-            Software Engineer & UI/UX Projects
-          </h2>
-          <p className="mt-3 text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl">
-            Web apps, SaaS, and design systems—from full-stack builds to Figma
-            prototypes across education, health, and product.
-          </p>
-        </header>
-      </div>
 
-      <div className="relative px-0 md:px-4">
-        <Carousel items={cards} />
-      </div>
+      <Carousel
+        items={cards}
+        header={
+          <div className="relative w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-10">
+            <header className="mb-2 md:mb-4">
+              <span className="inline-block text-xs md:text-sm font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">
+                Portfolio
+              </span>
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white font-sans tracking-tight max-w-3xl scroll-mt-24">
+                Software Engineer & UI/UX Projects
+              </h2>
+              <p className="mt-3 text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl">
+                Web apps, SaaS, and design systems—from full-stack builds to Figma
+                prototypes across education, health, and product.
+              </p>
+            </header>
+          </div>
+        }
+      />
     </section>
   );
 }
