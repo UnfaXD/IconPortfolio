@@ -99,6 +99,112 @@ export const ProjectData: Project[] = [
     },
   },
   {
+    id: "21",
+    title: "PesaPulse",
+    content: {
+      title: "Personal finance tracking, mobile first",
+      status: "ongoing",
+      category: "Fintech · Mobile app",
+      coverImage: "/assets/pesapulse.jpg",
+      contentLists: [
+        "✅ Income and expense tracking across accounts, categories and counterparties",
+        "✅ Separate books, so personal and business money never mix",
+        "✅ Phone number and PIN sign-in with secure token storage",
+        "✅ React Native app, NestJS API and a back office in three codebases",
+      ],
+      Problem:
+        "Most people who earn and spend through mobile money have no simple record of where it goes. Spreadsheets are too heavy for a phone, and banking apps only show one account at a time.",
+      Solution:
+        "Built PesaPulse as a mobile-first money tracker: a React Native (Expo Router) app backed by a NestJS API on PostgreSQL with Drizzle. Every record lives inside a book, ownership is enforced in SQL on every query, amounts are stored in minor units, and the API has unit, integration and end-to-end tests with versioned routes and a consistent error format.",
+      Conclusion:
+        "PesaPulse is in active development. I built it end to end, from the database schema to the last screen.",
+      ProjectArray: [
+        { image: "/assets/pesapulse.jpg", imageAlt: "PesaPulse cover" },
+      ],
+    },
+  },
+  {
+    id: "22",
+    title: "e-Piggy",
+    content: {
+      title: "A family savings wallet for children",
+      status: "ongoing",
+      category: "Fintech · Mobile app",
+      coverImage: "/assets/epiggy.jpg",
+      contentLists: [
+        "✅ Family accounts with parents, members and children",
+        "✅ Savings goals, tasks and gifts that fund a child's wallet",
+        "✅ Withdrawal requests that a parent approves",
+        "✅ Notifications, activity history and analytics",
+      ],
+      Problem:
+        "Parents want children to learn saving with real money, but handing a child a full mobile wallet is neither safe nor allowed. Families needed something in between.",
+      Solution:
+        "Built a React Native (Expo) app with onboarding, wallet, goals, tasks, funds and family management, on a NestJS API with TypeORM and PostgreSQL. Background jobs run on BullMQ and Redis, media goes through Cloudinary, and an admin module covers operations.",
+      Conclusion:
+        "e-Piggy is in development. It shows the kind of product I like building most: money, permissions and a friendly interface on top of careful rules.",
+      ProjectArray: [
+        { image: "/assets/epiggy.jpg", imageAlt: "e-Piggy cover" },
+      ],
+    },
+  },
+  {
+    id: "23",
+    title: "ServerOS",
+    content: {
+      title: "A native macOS control centre for Linux servers",
+      status: "ongoing",
+      category: "Developer tools · macOS",
+      coverImage: "/assets/serveros.jpg",
+      secondaryLink: "https://github.com/Reconfort/NakaApp",
+      secondaryLinkLabel: "Source code",
+      contentLists: [
+        "✅ Health, containers, services, databases, users, files and logs in one app",
+        "✅ Native Swift and SwiftUI client with its own design system",
+        "✅ Linux agent written in Rust, reached through an SSH port forward",
+        "✅ NestJS control plane for identity, server registry and audit",
+      ],
+      Problem:
+        "Running a small fleet of Linux servers means living in a terminal and remembering commands for Docker, systemd and PostgreSQL. Web panels fix that by exposing an admin port to the internet.",
+      Solution:
+        "Designed ServerOS so nothing new is exposed: the macOS app connects over the SSH session it already holds and talks to a small Rust agent bound to localhost on the server. A NestJS, Prisma and PostgreSQL control plane keeps identity and metadata and stays out of the path of every operation. The app ships with XCTest suites built on captured agent responses.",
+      Conclusion:
+        "ServerOS is my most technical project: three languages, a custom agent protocol and a security model where the safest choice is the default. The source is public.",
+      ProjectArray: [
+        { image: "/assets/serveros.jpg", imageAlt: "ServerOS cover" },
+      ],
+    },
+  },
+  {
+    id: "24",
+    title: "ChapChap Lending",
+    content: {
+      title: "Loan decisions in minutes",
+      status: "ongoing",
+      category: "Fintech · Lending",
+      coverImage: "/assets/chapchap.jpg",
+      projectLink: "https://chap-chap-web.vercel.app",
+      secondaryLink: "https://chap-chap-back.vercel.app",
+      secondaryLinkLabel: "Back office demo",
+      contentLists: [
+        "✅ Marketing site in English and Kinyarwanda",
+        "✅ Loan products, pricing, FAQ and a clear cost-before-you-accept message",
+        "✅ Back office dashboard: loan book, disbursements, repayments, collections",
+        "✅ Branch switching, quick payout and portfolio charts",
+      ],
+      Problem:
+        "A lender paying out to MTN MoMo and Airtel Money needs two things before launch: a site that borrowers trust enough to apply on, and a back office that staff can run a loan book from.",
+      Solution:
+        "Designed and built both front ends in Next.js: a bilingual marketing site with animated sections, and a back office interface covering portfolio value, disbursed and collected amounts, loan categories, settlements and team views. Both demos run on sample data.",
+      Conclusion:
+        "The two front ends are live as demos and ready to be connected to a lending API.",
+      ProjectArray: [
+        { image: "/assets/chapchap.jpg", imageAlt: "ChapChap Lending marketing site" },
+        { image: "/assets/chapchap-backoffice.jpg", imageAlt: "ChapChap Lending back office dashboard" },
+      ],
+    },
+  },
+  {
     id: "1",
     title: "Icon V1.",
     content: {
