@@ -74,9 +74,22 @@ export function getProjectsForEntry(
 
 export const ExperienceData: ExperienceEntry[] = [
   {
+    id: "2",
+    dateRange: "2024 — Present",
+    title: "Co-founder & Lead Engineer",
+    company: "Unfazed (formerly Icon)",
+    companySlug: "unfazed-xd",
+    companyDescription:
+      "Unfazed is a digital product studio in Kigali, co-founded by Reconfort Daniel and John Muhoza. It designs and builds web and mobile products for startups and brands, and runs products of its own.",
+    description:
+      "Co-founded Unfazed (formerly Icon) with John Muhoza. I lead engineering, from architecture and code standards to deployment, and share product strategy and client work. The studio has delivered 10+ client projects while building its own products: Estatify (property management SaaS), PesaPulse (personal finance app), e-Piggy (family savings wallet), ServerOS (native macOS server control) and ChapChap Lending.",
+    tags: ["Co-founder", "Lead Engineer", "Full Stack", "Product"],
+    projectIds: ["21", "22", "23", "24", "19", "20", "10", "1", "2", "3", "4", "5", "6", "7"],
+  },
+  {
     id: "1",
-    dateRange: "2025 — Present",
-    title: "Senior Software Engineer & UI/UX Designer",
+    dateRange: "Jun 2025 — Present",
+    title: "Senior Software Engineer",
     company: "Orion Systems & Design",
     companySlug: "orion-systems-design",
     companyUrl: "https://orionco.vercel.app/",
@@ -87,30 +100,14 @@ export const ExperienceData: ExperienceEntry[] = [
       { label: "Instagram", url: "https://www.instagram.com/orion_systems_rw/" },
     ],
     description:
-      "Experienced engineer and UI/UX designer focused on changing system efficiency through intuitive design and robust system maintenance. Build and maintain the Banking Systems and e-Government Platforms with clean, scalable code and user-centered interfaces that make complex workflows simple.",
-    tags: ["Angular", "ReactJS", "Figma"],
+      "Build and maintain banking systems and e-Government platforms, from customer portals to back-office tools, with clean, scalable code and interfaces that make complex workflows simple. I also lead UI/UX design on the products I work on.",
+    tags: ["Angular", "React", "Figma", "UI/UX"],
     projectIds: ["8", "9"],
   },
   {
-    id: "2",
-    dateRange: "2023 — Present",
-    title: "Lead Engineer & Full Stack Engineer",
-    company: "Unfazed XD",
-    companySlug: "unfazed-xd",
-    companyDescription:
-      "Unfazed XD is a digital product studio building web and mobile products for startups and brands.",
-    companyLinks: [
-      { label: "Dribbble", url: "https://dribbble.com" },
-    ],
-    description:
-      "Founded a digital product company that has successfully delivered 10+ client projects while simultaneously building and operating proprietary products. Led Estatify (property management SaaS), Unfazed Studio (creative technology studio site), and Lunaroot (streetwear), with a strong focus on scalable architecture, thoughtful design systems, and user-driven product development.",
-    tags: ["Fullstack", "Management", "Lead", "Founder"],
-    projectIds: ["19", "20", "10", "1", "2", "3", "4", "5", "6", "7"],
-  },
-  {
     id: "3",
-    dateRange: "2024 March — Jan 2025",
-    title: "Software Engineer & Blockchain Developer",
+    dateRange: "Mar 2024 — Jan 2025",
+    title: "Full Stack Engineer",
     company: "Blockchain Tech Solutions",
     companySlug: "blockchain-tech-solutions",
     companyUrl: "https://blockchaingamealliance.net/",
@@ -118,26 +115,50 @@ export const ExperienceData: ExperienceEntry[] = [
       "Blockchain Tech Solutions develops blockchain-based products including gaming and NFT platforms.",
     companyLinks: [{ label: "Website", url: "https://blockchaingamealliance.net/" }],
     description:
-      "Developed and maintained the core functionality of the Blockchain Tech Solutions platform, including the Gaming Platforms and the NFT Management System.",
-    tags: ["NestJS", "Microservices", "Blockchain", "Smart Contracts", "NextJS"],
+      "Remote, with a Doha-based team. Built NestJS microservices on Kafka for event-driven, high-throughput systems, and Next.js and React front ends, including blockchain gaming platforms (RC27) that integrate smart contracts and Web3.",
+    tags: ["NestJS", "Kafka", "Microservices", "Next.js", "Smart Contracts"],
     projectIds: [],
   },
   {
     id: "4",
-    dateRange: "2024 March — December 2024",
-    title: "Frontend & Mobile Developer",
-    company: "Amalitech",
+    dateRange: "Mar 2024 — Dec 2024",
+    title: "Frontend Engineer",
+    company: "AmaliTech",
     companySlug: "amalitech",
     companyUrl: "https://www.amalitech.com/",
     companyDescription:
-      "Amalitech is an outsourcing and software development company with offices in Africa and Europe.",
+      "AmaliTech is an outsourcing and software development company with offices in Africa and Europe.",
     companyLinks: [
       { label: "Website", url: "https://www.amalitech.com/" },
       { label: "Careers", url: "https://www.amalitech.com/careers" },
     ],
     description:
-      "Developed and maintained the core functionality of the Amalitech products, including the outsourced projects and the internal tools.",
-    tags: ["React Native", "Angular JS", "Signals"],
+      "Built scalable enterprise single-page applications in Angular, TypeScript and RxJS, with state management in NgRx, accessible UI components, secure REST integrations and Jest-tested code.",
+    tags: ["Angular", "TypeScript", "RxJS", "NgRx"],
+    projectIds: [],
+  },
+  {
+    id: "5",
+    dateRange: "Jun 2024 — Dec 2024",
+    title: "Mobile App Developer",
+    company: "Park & Pick",
+    companySlug: "park-and-pick",
+    companyDescription: "Park & Pick is a Kigali startup building a mobile app for its customers.",
+    description:
+      "Built a cross-platform iOS and Android app in React Native and TypeScript, with reusable, accessible UI components, API integrations and performance work for low-bandwidth users.",
+    tags: ["React Native", "TypeScript", "UI/UX"],
+    projectIds: [],
+  },
+  {
+    id: "6",
+    dateRange: "Feb 2022 — Aug 2024",
+    title: "Software Engineer",
+    company: "University of Rwanda",
+    companySlug: "university-of-rwanda",
+    companyDescription: "Rwanda's national public university, where I also completed my degree.",
+    description:
+      "Worked as a software engineer at the university while studying there. Built full-stack web applications in React, TypeScript, Node.js and Express, including REST APIs and back-end integrations, in Agile teams with Git and code review.",
+    tags: ["React", "Node.js", "Express", "TypeScript"],
     projectIds: [],
   },
 ];

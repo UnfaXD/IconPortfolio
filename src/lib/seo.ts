@@ -6,10 +6,10 @@ export const siteUrl =
 
 export const defaultSeo = {
   title:
-    "Reconfort Daniel — Senior Software Engineer & UI/UX Designer | Full-Stack Developer Portfolio",
+    "Reconfort Daniel — Co-founder of Unfazed · Senior Software Engineer & UI/UX Designer",
   shortTitle: "Reconfort Daniel",
   description:
-    "Senior Software Engineer & UI/UX Designer. Full-stack developer building scalable web apps, SaaS, and startup products. React, Next.js, Angular, system design. Hire for startups & tech teams. Based in Kigali, Rwanda.",
+    "Co-founder of Unfazed and Senior Software Engineer & UI/UX Designer. Full-stack developer building scalable web apps, SaaS, and startup products. React, Next.js, Angular, system design. Hire for startups & tech teams. Based in Kigali, Rwanda.",
   keywords: [
     "Software Engineer Portfolio",
     "Senior Software Engineer",
@@ -52,7 +52,7 @@ export function buildPersonSchema() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: defaultSeo.author,
-    jobTitle: "Senior Software Engineer & UI/UX Designer",
+    jobTitle: "Co-founder of Unfazed · Senior Software Engineer",
     description: defaultSeo.description,
     url: siteUrl,
     image: absoluteUrl(defaultSeo.imagePath),
