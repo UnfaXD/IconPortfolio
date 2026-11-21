@@ -75,7 +75,7 @@ export function getProjectsForEntry(
 export const ExperienceData: ExperienceEntry[] = [
   {
     id: "2",
-    dateRange: "2024 — Present",
+    dateRange: "Mar 2024 — Present",
     title: "Founder & Lead Engineer",
     company: "Unfazed (formerly Icon)",
     companySlug: "unfazed-xd",
