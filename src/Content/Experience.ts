@@ -76,14 +76,14 @@ export const ExperienceData: ExperienceEntry[] = [
   {
     id: "2",
     dateRange: "2024 — Present",
-    title: "Co-founder & Lead Engineer",
+    title: "Founder & Lead Engineer",
     company: "Unfazed (formerly Icon)",
     companySlug: "unfazed-xd",
     companyDescription:
-      "Unfazed is a digital product studio in Kigali, co-founded by Reconfort Daniel and John Muhoza. It designs and builds web and mobile products for startups and brands, and runs products of its own.",
+      "Unfazed is a digital product studio in Kigali, founded by Reconfort Daniel. It designs and builds web and mobile products for startups and brands, and runs products of its own.",
     description:
-      "Co-founded Unfazed (formerly Icon) with John Muhoza. I lead engineering, from architecture and code standards to deployment, and share product strategy and client work. The studio has delivered 10+ client projects while building its own products: Estatify (property management SaaS), PesaPulse (personal finance app), e-Piggy (family savings wallet), ServerOS (native macOS server control) and ChapChap Lending.",
-    tags: ["Co-founder", "Lead Engineer", "Full Stack", "Product"],
+      "Founded Unfazed (formerly Icon). I lead engineering, from architecture and code standards to deployment, and own product strategy and client work. The studio has delivered 10+ client projects while building its own products: Estatify (property management SaaS), PesaPulse (personal finance app), e-Piggy (family savings wallet), ServerOS (native macOS server control) and ChapChap Lending.",
+    tags: ["Founder", "Lead Engineer", "Full Stack", "Product"],
     projectIds: ["21", "22", "23", "24", "19", "20", "10", "1", "2", "3", "4", "5", "6", "7"],
   },
   {

@@ -2,9 +2,9 @@ export const CompanyName = 'Reconfort.';
 
 export const HeroContent1 = "I am Reconfort, ";
 
-export const HeroServices = ['Co-founder of Unfazed', 'Software Engineer', 'UI/UX Designer', 'Product Manager']
+export const HeroServices = ['Founder of Unfazed', 'Software Engineer', 'UI/UX Designer', 'Product Manager']
 
-export const HeroParagraph = 'Senior software engineer and co-founder of Unfazed, a product studio in Kigali. I build products that are user-friendly and efficient.'
+export const HeroParagraph = 'Senior software engineer and founder of Unfazed, a product studio in Kigali. I build products that are user-friendly and efficient.'
 
 export const DockContent = [
     {title:'MongoDB', icon: '/custom-icons/mongodb.png', path: 'https://www.mongodb.com'},
