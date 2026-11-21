@@ -29,7 +29,7 @@ export function Ongoing() {
             Building in public
           </h2>
           <p className="mt-3 text-base md:text-lg text-neutral-600 dark:text-neutral-400">
-            Live products I&apos;m actively shipping—each one standalone. More
+            Products I&apos;m actively shipping—each one standalone. More
             soon.
           </p>
         </header>
@@ -51,7 +51,7 @@ export function Ongoing() {
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noopener noreferrer" : undefined}
                   className="relative block overflow-hidden rounded-xl bg-neutral-200/80 dark:bg-neutral-900 ring-1 ring-neutral-200 dark:ring-neutral-800 transition-[ring-color,transform] duration-300 group-hover:ring-neutral-300 dark:group-hover:ring-neutral-700"
-                  aria-label={`Open ${project.title} live site`}
+                  aria-label={`Open ${project.title}`}
                 >
                   <div
                     className="flex items-center gap-1.5 border-b border-neutral-200/80 dark:border-neutral-800 px-3 py-2"
@@ -97,7 +97,7 @@ export function Ongoing() {
                         className="h-1.5 w-1.5 rounded-full bg-lime-400"
                         aria-hidden
                       />
-                      Live
+                      {content.projectLink ? "Live" : "In development"}
                     </span>
                     <span className="text-neutral-300 dark:text-neutral-700" aria-hidden>
                       /

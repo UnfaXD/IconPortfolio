@@ -50,7 +50,6 @@ export const ProjectData: Project[] = [
       status: "ongoing",
       category: "SaaS · Real Estate",
       coverImage: "/assets/estatify.jpg",
-      projectLink: "https://www.estatify.rw/",
       contentLists: [
         "✅ Properties, units, tenants, and leases in one workspace",
         "✅ Rent tracking, renewals, and payment history",
@@ -62,7 +61,7 @@ export const ProjectData: Project[] = [
       Solution:
         "Building Estatify as a clear, modern property management SaaS: add properties and units, connect tenants and leases, then run payments and maintenance from one source of truth—with a marketing site that makes the product feel familiar from day one.",
       Conclusion:
-        "Estatify is an ongoing personal product—live, iterated weekly, and designed to cover the full operator loop from portfolio control to rent day and maintenance.",
+        "Estatify is an ongoing personal product—in active development, iterated weekly, and designed to cover the full operator loop from portfolio control to rent day and maintenance.",
       ProjectArray: [
         {
           image: "/assets/estatify.jpg",
@@ -79,19 +78,18 @@ export const ProjectData: Project[] = [
       status: "ongoing",
       category: "Studio · Agency",
       coverImage: "/assets/unfazed-studio.jpg",
-      projectLink: "https://studio.estatify.rw/",
       contentLists: [
         "✅ Full-service studio positioning: build, launch, grow, scale",
         "✅ Software, product design, branding, and growth services",
         "✅ Case studies and clear proposal / contact flows",
-        "✅ Live studio marketing site",
+        "✅ Studio marketing site",
       ],
       Problem:
         "Unfazed needed a sharp public face that sells ambitious digital work—websites, brands, and products—without looking like a generic agency template.",
       Solution:
         "Designed and shipped a bold studio marketing site with clear services, process, and case-study storytelling so prospects understand the offer and can start a conversation fast.",
       Conclusion:
-        "The studio site is live and evolving, anchoring Unfazed as a Kigali creative-technology studio for client and product work.",
+        "The studio site keeps evolving, anchoring Unfazed as a Kigali creative-technology studio for client and product work.",
       ProjectArray: [
         {
           image: "/assets/unfazed-studio.jpg",

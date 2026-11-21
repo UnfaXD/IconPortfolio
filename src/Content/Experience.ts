@@ -97,12 +97,9 @@ export const ExperienceData: ExperienceEntry[] = [
     title: "Lead Engineer & Full Stack Engineer",
     company: "Unfazed XD",
     companySlug: "unfazed-xd",
-    companyUrl: "https://studio.estatify.rw/",
     companyDescription:
       "Unfazed XD is a digital product studio building web and mobile products for startups and brands.",
     companyLinks: [
-      { label: "Studio", url: "https://studio.estatify.rw/" },
-      { label: "Estatify", url: "https://www.estatify.rw/" },
       { label: "Dribbble", url: "https://dribbble.com" },
     ],
     description:
