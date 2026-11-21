@@ -105,7 +105,7 @@ export function Blogs() {
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white font-sans tracking-tight max-w-3xl scroll-mt-24">
                 Software Engineer & UI/UX Projects
               </h2>
-              <p className="mt-3 text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl">
+              <p className="mt-3 text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl [@media(max-height:700px)]:hidden">
                 Web apps, SaaS, and design systems—from full-stack builds to Figma
                 prototypes across education, health, and product.
               </p>

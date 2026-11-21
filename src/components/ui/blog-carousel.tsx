@@ -254,7 +254,7 @@ export const Card = ({
             <motion.button
                 layoutId={layout ? `card-${card.title}` : undefined}
                 onClick={handleOpen}
-                className="group rounded-2xl md:rounded-3xl bg-neutral-100 dark:bg-neutral-900 h-80 w-56 md:h-[min(36rem,56svh)] md:w-96 overflow-hidden flex flex-col items-start justify-end relative z-10 border border-neutral-200 dark:border-neutral-800 shadow-md hover:shadow-xl hover:border-neutral-300 dark:hover:border-neutral-700 hover:scale-[1.02] transition-all duration-300"
+                className="group rounded-2xl md:rounded-3xl bg-neutral-100 dark:bg-neutral-900 h-80 w-56 md:h-[clamp(16rem,calc(100svh-24rem),34rem)] md:w-96 overflow-hidden flex flex-col items-start justify-end relative z-10 border border-neutral-200 dark:border-neutral-800 shadow-md hover:shadow-xl hover:border-neutral-300 dark:hover:border-neutral-700 hover:scale-[1.02] transition-all duration-300"
             >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-20 pointer-events-none" />
                 <div className="relative z-30 p-6 md:p-8">
